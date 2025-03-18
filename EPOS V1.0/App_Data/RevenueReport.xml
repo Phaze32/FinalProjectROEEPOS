@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RevenueReport>
+      
+    <Data Year="2008" Period="Q1" AuditedBy="Maria Anders" DirectRevenue="12500.00" ReferralRevenue="2500.00" />
+    <Data Year="2008" Period="Q2" AuditedBy="Ana Trujillo" DirectRevenue="21000.00" ReferralRevenue="8000.00" />
+    <Data Year="2008" Period="Q3" AuditedBy="Antonio Moreno" DirectRevenue="20000.00" ReferralRevenue="5000.00" />
+    <Data Year="2008" Period="Q4" AuditedBy="Thomas Hardy" DirectRevenue="25000.00" ReferralRevenue="1200.00" />
+    
+    <Data Year="2009" Period="Q1" AuditedBy="Christina Berglund" DirectRevenue="72500.00" ReferralRevenue="5000.00" />
+    <Data Year="2009" Period="Q2" AuditedBy="Hanna Moos" DirectRevenue="15000.00" ReferralRevenue="6500.00" />
+    <Data Year="2009" Period="Q3" AuditedBy="Thomas Hardy" DirectRevenue="25000.00" ReferralRevenue="1520.00" />
+    <Data Year="2009" Period="Q4" AuditedBy="Martin Sommer" DirectRevenue="42000.00" ReferralRevenue="2580.00" />
+    
+    <Data Year="2010" Period="Q1" AuditedBy="Laurence Lebihan" DirectRevenue="12500.00" ReferralRevenue="1500.00" />
+    <Data Year="2010" Period="Q2" AuditedBy="Elizabeth Lincoln" DirectRevenue="25000.00" ReferralRevenue="5500.00" />
+    <Data Year="2010" Period="Q3" AuditedBy="Hanna Moos" DirectRevenue="12000.00" ReferralRevenue="1800.00" />
+    <Data Year="2010" Period="Q4" AuditedBy="Antonio Moreno" DirectRevenue="10000.00" ReferralRevenue="1200.00" />
+ 
+</RevenueReport>

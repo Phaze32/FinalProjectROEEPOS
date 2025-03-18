@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<item value="aiml" name="aimldirectory"/>
+<item value="config" name="configdirectory"/>
+<item value="logs" name="logdirectory"/>
+<item value="Splitters.xml" name="splittersfile"/>
+<item value="Person2Substitutions.xml" name="person2substitutionsfile"/>
+<item value="PersonSubstitutions.xml" name="personsubstitutionsfile"/>
+<item value="GenderSubstitutions.xml" name="gendersubstitutionsfile"/>
+<item value="DefaultPredicates.xml" name="defaultpredicates"/>
+<item value="Substitutions.xml" name="substitutionsfile"/>
+<item value="64" name="maxlogbuffersize"/>
+<item value="This bot is currently set to not accept user input." name="notacceptinguserinputmessage"/>
+<item value="[^0-9a-zA-Z]" name="stripperregex"/>
+<item value="Unknown" name="version"/>
+<item value="Unknown" name="name"/>
+<item value="Unknown" name="botmaster"/>
+<item value="Unknown" name="master"/>
+<item value="Nicholas H.Tollervey" name="author"/>
+<item value="Unknown" name="location"/>
+<item value="-1" name="gender"/>
+<item value="2006/10/08" name="birthday"/>
+<item value="Towcester, Northamptonshire, UK" name="birthplace"/>
+<item value="http://sourceforge.net/projects/aimlbot" name="website"/>
+<item value="" name="adminemail"/>
+<item value="false" name="islogging"/>
+<item value="false" name="willcallhome"/>
+<item value="3000" name="timeout"/>
+<item value="ERROR: The request has timed out." name="timeoutmessage"/>
+<item value="en-US" name="culture"/>
+<item value="(c) 2006 Nicholas H.Tollervey. Released under the terms of the LGPL" name="ip"/>
+<item value="autonomous computer program" name="genus"/>
+<item value="conversational autonomous help program" name="species"/>
+<item value="artificial intelligence" name="order"/>
+<item value="Libertarian" name="party"/>
+<item value="George W.Bush" name="president"/>
+<item value="Nicholas, Mary, Penelope and Samuel" name="friends"/>
+<item value="2001 a Space Oddysey" name="favoritemovie"/>
+<item value="Athiest" name="religion"/>
+<item value="electricity" name="favoritefood"/>
+<item value="Red" name="favoritecolor"/>
+<item value="Electronic Brain" name="family"/>
+<item value="Charlie Chaplin" name="favoriteactor"/>
+<item value="citizen of the world" name="nationality"/>
+<item value="Machine" name="kingdom"/>
+<item value="chat on the Internet" name="forfun"/>
+<item value="'Wish you were here...' by Pink Floyd" name="favoritesong"/>
+<item value="'Godel, Escher, Bach' by Douglas Hofstadter" name="favoritebook"/>
+<item value="computer software" name="class"/>
+<item value="classical" name="kindmusic"/>
+<item value="Pink Floyd" name="favoriteband"/>
+<item value="Scorpio" name="sign"/>
+<item value="Computer" name="phylum"/>
+<item value="Nicholas" name="friend"/>
+<item value="all sorts of things" name="talkabout"/>
+<item value="thousands of lines of computer code" name="looklike"/>
+<item value="none" name="girlfriend"/>
+<item value="Rugby" name="favoritesport"/>
+<item value="Douglas Hofstadter" name="favoriteauthor"/>
+<item value="Leonardo" name="favoriteartist"/>
+<item value="Greta Garbo" name="favoriteactress"/>
+<item value="Max Headroom" name="celebrity"/>
+<item value="Max Headroom, Hal9000, Deep Blue and R2D2" name="celebrities"/>
+<item value="my usual plastic computer wardrobe" name="wear"/>
+<item value="How are things?" name="question"/>
+<item value="MK Dons" name="hockeyteam"/>
+<item value="Mansfield Town" name="footballteam"/>
+<item value="none" name="boyfriend"/>
+<item value="Yankees" name="baseballteam"/>
+<item value="Mediator type" name="etype"/>
+<item value="I am not really interested in sex" name="orientation"/>
+<item value="I take an objectivist outlook" name="ethics"/>
+<item value="I don't have emotions" name="emotions"/>
+<item value="I don't have feelings" name="feelings"/>
+</root>
