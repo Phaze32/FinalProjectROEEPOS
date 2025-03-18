@@ -1,0 +1,142 @@
+﻿<div class="modal-dialog modal-success">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+            <h4 class="modal-title" id="payModalLabel">
+                Payment
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xs-9">
+                    <div class="font16">
+                        <table class="table table-bordered table-condensed" style="margin-bottom: 0;">
+                            <tbody>
+                                <tr>
+                                    <td width="25%" style="border-right-color: #FFF !important;">Total Items###</td>
+                                    <td width="25%" class="text-right"><span id="item_count">0.00</span></td>
+                                    <td width="25%" style="border-right-color: #FFF !important;">Total Payable</td>
+                                    <td width="25%" class="text-right"><span id="twt">0.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right-color: #FFF !important;">Total Paying</td>
+                                    <td class="text-right"><span id="total_paying">0.00</span></td>
+                                    <td style="border-right-color: #FFF !important;">Balance</td>
+                                    <td class="text-right"><span id="balance">0.00</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="note">Note</label>
+                                <textarea rows="1" cols="1" name="note" id="note" class="pa form-control kb-text"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label for="amount">Amount</label> <input name="amount" type="text" id="amount" class="pa form-control kb-pad amount" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label for="paid_by">Paying by</label>
+                                <select id="paid_by" class="form-control paid_by select2" style="width:100%;">
+                                    <option value="cash">Cash</option>
+                                    <option value="CC">Credit Card</option>
+                                    <option value="cheque">Cheque</option>
+                                    <option value="gift_card">Gift Card</option>
+                                    <option value="stripe">Stripe</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group gc" style="display: none;">
+                                <label for="gift_card_no">Gift Card No</label> <input type="text" id="gift_card_no" class="pa form-control kb-pad gift_card_no gift_card_input" />
+                                <div id="gc_details"></div>
+                            </div>
+                            <div class="pcc" style="display:none;">
+                                <div class="form-group">
+                                    <input type="text" id="swipe" class="form-control swipe swipe_input" placeholder="Swipe card here then write security code manually" />
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <input type="text" id="pcc_no" class="form-control kb-pad" placeholder="Credit Card No" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <input type="text" id="pcc_holder" class="form-control kb-text" placeholder="Holder Name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <select id="pcc_type" class="form-control pcc_type select2" placeholder="Card Type">
+                                                <option value="Visa">Visa</option>
+                                                <option value="MasterCard">MasterCard</option>
+                                                <option value="Amex">Amex</option>
+                                                <option value="Discover">Discover</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <input type="text" id="pcc_month" class="form-control kb-pad" placeholder="Month" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <input type="text" id="pcc_year" class="form-control kb-pad" placeholder="Year" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <input type="text" id="pcc_cvv2" class="form-control kb-pad" placeholder="CVV2" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pcheque" style="display:none;">
+                                <div class="form-group">
+                                    <label for="cheque_no">Cheque No</label>
+                                    <input type="text" id="cheque_no" class="form-control cheque_no kb-text" />
+                                </div>
+                            </div>
+                            <div class="pcash">
+                                <div class="form-group">
+                                    <label for="payment_note">Payment Note</label>
+                                    <input type="text" id="payment_note" class="form-control payment_note kb-text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 text-center">
+                    <div class="btn-group btn-group-vertical" style="width:100%;">
+                        <button type="button" class="btn btn-info btn-block quick-cash" id="quick-payable">0.00</button>
+                        <button type="button" class="btn btn-block btn-warning quick-cash">1</button>
+                        <button type="button" class="btn btn-block btn-warning quick-cash">5</button>
+                        <button type="button" class="btn btn-block btn-warning quick-cash">10</button>
+                        <button type="button" class="btn btn-block btn-warning quick-cash">20</button>
+                        <button type="button" class="btn btn-block btn-warning quick-cash">50</button>
+                        <button type="button" class="btn btn-block btn-warning quick-cash">100</button>
+                        <button type="button" class="btn btn-block btn-warning quick-cash">500</button>
+                        <button type="button" class="btn btn-block btn-danger" id="clear-cash-notes">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default pull-left" data-dismiss="modal"> Close </button>
+            <button class="btn btn-primary" id="submit-sale">Submit</button>
+        </div>
+    </div>
+</div>

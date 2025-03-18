@@ -1,0 +1,11 @@
+[
+  "{\"DateTime\": \"22/05/2024 20:25:38\", \"UserMessage\": \"bull\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"I didnt understand that.\"\r\n}",
+  "{\"DateTime\": \"25/05/2024 19:34:49\", \"UserMessage\": \"i amm sad\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"I didnt understand that.\"\r\n}",
+  "{\"DateTime\": \"25/05/2024 20:38:31\", \"UserMessage\": \"what is your name\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"I didnt understand that.\"\r\n}",
+  "{\"DateTime\": \"25/05/2024 20:40:45\", \"UserMessage\": \"do you sleep\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"I didnt understand that.\"\r\n}",
+  "{\"DateTime\": \"27/05/2024 20:58:52\", \"UserMessage\": \"salam\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"I didnt understand that.\"\r\n}",
+  "{\"DateTime\": \"27/07/2024 21:57:07\", \"UserMessage\": \"salam\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"I didnt understand that.\"\r\n}",
+  "{\"DateTime\": \"27/07/2024 21:57:23\", \"UserMessage\": \"what is your name\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"I didnt understand that.\"\r\n}",
+  "{\"DateTime\": \"27/07/2024 21:58:52\", \"UserMessage\": \"salam\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"I didnt understand that.\"\r\n}",
+  "{\"DateTime\": \"27/07/2024 21:58:57\", \"UserMessage\": \"why\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"I didnt understand that.\"\r\n}"
+]
