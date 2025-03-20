@@ -1,0 +1,120 @@
+﻿<script type="text/javascript">
+    function myFunc(f) {
+        // f = "ddd";
+        // alert("Test ok!" + "PLUid=" + f);
+        get_product(f);
+    };
+    function get_customer() {
+        alert('hhh##FormCustomerModal');
+        alert('ln9.FormCustomerModal.html.get_customer.ln:9 pos/AddEditCustomer.aspx?' + 'cname=' + cname.value + '&sname=' + sname.value + '&cemail=' + cemail.value + '&cphone=' + cphone.value + '&cf1=' + cf1.value + '&cf2=' + cf2.value + '&cpostcode=' + cpostcode.value + 'zzz');
+        // alert('FormCustomerModal.html.get_customer.ln:9 /pos/add_customer.aspx' + 'cname=' + cname.value + '&sname=' + sname.value + '&cemail=' + cemail.value + '&cphone=' + cphone.value + '&cf1=' + cf1.value + '&cf2=' + cf2.value + '&cpostcode=' + cpostcode.value  );
+        // Retrieve TicketID from query string
+        var urlParams = new URLSearchParams(window.location.search);
+        var ticketID = urlParams.get('TicketID');
+
+        var mdata = 'Forename=' + cname.value + '&Surname=' + sname.value + '&EMail=' + cemail.value + '&Telephone=' + cphone.value + '&AddressStreet=' + cf1.value + '&AddressTown=' + cf2.value + '&Postcode=' + cpostcode.value + '&TicketID=' + ticketID;
+
+        alert('ln12.get_customer##mdata='+ mdata + '##')
+        $.ajax({
+            type: "get",
+            url: "/pos/addeditcustomer.aspx?",
+            data: "act=addcustomer&" + mdata,
+            success: function (msg) {
+                // alert('get_product.ln:22 msg=' + msg);
+                $("#result").html(msg);
+
+                //setTimeout(function(){$.unblockUI}, 50 );
+                // $.unblockUI();
+            }
+        });
+        get_Totals("66");
+    };
+</script>
+<!-- *************************************************************************** -->
+<!-- form is triggered through ajax function in file scripts\posmain.js line 164 -->
+<!-- *************************************************************************** -->
+<div class="modal" data-easein="flipYIn" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="cModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title" id="cModalLabel">
+                    Add Customer
+                </h4>
+            </div>
+            <!-- Add Customer Form-->
+            <form action="get_customer(this);" id="customer-form" method="post" accept-charset="utf-8">
+                <input type="hidden" name="spos_token" value="1479a37b6443485bdaaf75fb256d1484" />
+                <div class="modal-body">
+                    <div id="c-alert" class="alert alert-danger" style="display:none;"></div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label class="control-label" for="code">
+                                    First Name
+                                </label>
+                                <input type="text" name="name_placeholder_Name" value="" class="form-control input-sm kb-text" id="cname" />
+                                <label class="control-label" for="code">
+                                    Sur Name
+                                </label>
+                                <input type="text" name="sur_name_placeholder_Name" value="" class="form-control input-sm kb-text" id="sname" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="cemail">
+                                    Email Address
+                                </label>
+                                <input type="text" name="email_placeholder_Name" value="" class="form-control input-sm kb-text" id="cemail" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="phone">
+                                    Phone
+                                </label>
+                                <input type="text" name="phone" value="" class="form-control input-sm kb-pad" id="cphone" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="cf1">
+                                    Address 1
+                                </label>
+                                <input type="text" name="cf1_placeholder_Name" value="" class="form-control input-sm kb-text" id="cf1" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="cf2">
+                                    Address 2
+                                </label>
+                                <input type="text" name="cf2_placeholder_Name" value="" class="form-control input-sm kb-text" id="cf2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="postcode">
+                                    Post Code
+                                </label>
+                                <input type="text" name="postcode_placeholder_Name" value="" class="form-control input-sm kb-text" id="cpostcode" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer" style="margin-top:0;">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal"> Close </button>
+                    <button type="button" class="btn btn-primary" id="add_customerQ" onclick="get_customer(this)"> Add Customer</button>
+                </div>
+                <div id="result"> result </div>
+            </form>
+        </div>
+    </div>
+</div>

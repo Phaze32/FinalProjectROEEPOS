@@ -1,0 +1,56 @@
+[
+    {
+      "category": "Intent",
+      "description": "The user's goal or desired action based on their message.",
+      "examples": [
+        "Greeting",
+        "Order Status",
+        "Product Information",
+        "Technical Support",
+        "Feedback",
+        "Complaint",
+        "Appointment Booking",
+        "Payment",
+        "Chat",
+        "Navigation",
+        "Conversation"
+      ]
+    },
+    {
+      "category": "Sentiment",
+      "description": "The emotional tone of the user's message.",
+      "examples": [
+        "Positive",
+        "Negative",
+        "Neutral"
+      ]
+    },
+    {
+      "category": "Action Prediction",
+      "description": "The likely action the user will take based on their interaction.",
+      "examples": [
+        "Purchase",
+        "Churn",
+        "Support Ticket Creation"
+      ]
+    },
+    {
+      "category": "Event Prediction",
+      "description": "Forecasting future events based on user behavior and past interactions.",
+      "examples": [
+        "Order Completion",
+        "Website Abandonment",
+        "Return Request"
+      ]
+    },
+    {
+      "category": "Other Predictions",
+      "description": "Additional predictions specific to your chatbot's domain.",
+      "examples": [
+        "Product Category Interest",
+        "Service Satisfaction"
+      ]
+    }
+  ]
+
+
