@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+
+  <appSettings>
+    <add key="ChartImageHandler" value="storage=file;timeout=20;dir= D:\wwwroot\EscapadeMIS_wip\TempImageFiles\;" />
+    <!--<add key="autoFormsAuthentication" value="true" />-->
+  </appSettings>
+  <!--<location path="default1.aspx">
+    <system.web>
+      <authorization>
+        <allow users ="*" />
+      </authorization>
+    </system.web>
+  </location>-->
+    <location path="Logon.aspx">
+    <system.web>
+       <httpRuntime maxRequestLength="10485760" />
+       <pages autoEventWireup="false" />
+      <authorization>
+        <allow users="?"/>
+      </authorization>
+    </system.web>
+  </location>  
+    
+  <connectionStrings>
+    <add name="Escapade_NewConnectionString" connectionString="Data Source=DESKTOP-G5E7QA1;Initial Catalog=Escapade_New;User ID=sa;Password=f4f4fVd8"
+      providerName="System.Data.SqlClient" />
+    <add name="Escapade_NewConnectionString_old" connectionString="Data Source=ESCAPADEDEVELOP\SQLEXPRESS;Initial Catalog=Escapade_New;Persist Security Info=True;User ID=sa1;Password=password"
+      providerName="System.Data.SqlClient" />
+    <add name="Escapade_NewConnectionString2" connectionString="Data Source=ESCAPADEDEVELOP\SQLEXPRESS;Initial Catalog=Escapade_New;Persist Security Info=True;User ID=sa1;Password=password"
+      providerName="System.Data.SqlClient" />
+    <add name="Escapade_NewConnectionString_dev" connectionString="Data Source=ESCAPADEDEVELOP\SQLEXPRESS;Initial Catalog=Escapade_New_dev;Persist Security Info=True;User ID=sa1;Password=password"
+      providerName="System.Data.SqlClient" />
+    <add name="Escapade_NewConnectionString_11072014" connectionString="Data Source=ESCAPADEDEVELOP\SQLEXPRESS;Initial Catalog=Escapade_New__11072014;Persist Security Info=True;User ID=sa4;Password=e5capade"
+      providerName="System.Data.SqlClient" />
+    <add name="Escapade_NewConnectionString_server" connectionString="Data Source=80.244.186.64,1334;Initial Catalog=Escapade_New;User ID=sa;Password=f4f4fVd8"
+      providerName="System.Data.SqlClient" />
+    <add name="Escapade_NewConnectionString_newServer" connectionString="Data Source=46.37.182.110,1334;Initial Catalog=Escapade_New;User ID=sa;Password=GhXugZn2"
+      providerName="System.Data.SqlClient" />
+    <add name="EscapadeErrorsConnectionString" connectionString="Data Source=ESCAPADEDEVELOP\ESCAPADE_2012;Initial Catalog=EscapadeErrors;User ID=sa;Password=f4f4fVd8"
+      providerName="System.Data.SqlClient" />
+    <add name="EscapadeShaunConnectionString" connectionString="Data Source=ESCAPADEDEVELO2\SQLEXPRESS;Initial Catalog=Escapade_New_LATEST_VERSION;User ID=sa;Password=password"
+      providerName="System.Data.SqlClient" />
+    <add name="Escapade_NewConnectionString_2015" connectionString="Data Source=ESCAPADEDEVELOP\ESCAPADE_2012;Initial Catalog=Escapade_New_2015;User ID=sa;Password=f4f4fVd8"
+      providerName="System.Data.SqlClient" />
+    <add name="Escapade_NewConnection_30012015" connectionString="Data Source=ESCAPADEDEVELOP\ESCAPADE_2012;Initial Catalog=Escapade_New_30012015;User ID=sa;Password=f4f4fVd8"
+      providerName="System.Data.SqlClient" />
+    <add name="Escapade_NewConnection_03022015" connectionString="Data Source=ESCAPADEDEVELOP\ESCAPADE_2012;Initial Catalog=Escapade_New_03022015;User ID=sa;Password=f4f4fVd8"
+      providerName="System.Data.SqlClient" />
+    <add name="EscapadeErrors_NewConnectionString" connectionString="Data Source=DESKTOP-DH9T4B6;Initial Catalog=EscapadeErrors;User ID=sa;Password=f4f4fVd8"
+      providerName="System.Data.SqlClient" />
+    <add name="DSTConnectionString" connectionString="Data Source=HP2022;Initial Catalog=DST;User ID=sa;Password=f4f4fVd8"
+      providerName="System.Data.SqlClient" />
+	<add name="DSTConnectionStringSystem" connectionString="Data Source=HP2022;Initial Catalog=DST;Integrated Security=True;"
+      providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <system.web>
+    <!--<authentication mode="Windows" />-->
+    <sessionState timeout="30" />
+    <authentication mode="Forms">
+      <forms loginUrl="Logon.aspx" name=".ASPXFORMSAUTH">
+      </forms>
+    </authentication>
+    <authorization>
+      <deny users="?" />
+    </authorization>
+    <httpHandlers>
+      <add path="ChartImg.axd" verb="GET,HEAD,POST" type="System.Web.UI.DataVisualization.Charting.ChartHttpHandler, System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" validate="false" />
+    </httpHandlers>
+    <pages>
+      <controls>
+        <add tagPrefix="asp" namespace="System.Web.UI.DataVisualization.Charting" assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add tagPrefix="ajaxToolkit" assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" />
+      </controls>
+    </pages>
+    <compilation debug="true" strict="false" explicit="true" targetFramework="4.8">
+	<httpRuntime targetFramework="4.8"/>
+
+      <assemblies>
+        <add assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Data.Services.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+      </assemblies>
+      <codeSubDirectories>
+        <add directoryName="CSCode" />
+        <add directoryName="VBCode" />
+      </codeSubDirectories>
+    </compilation>
+    <httpRuntime executionTimeout="432000" maxRequestLength="1004856" />
+
+    <membership>
+      <providers>
+        <clear />
+        <add name="AspNetSqlMembershipProvider" type="System.Web.Security.SqlMembershipProvider" connectionStringName="Escapade_NewConnectionString" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="false" requiresUniqueEmail="false" maxInvalidPasswordAttempts="5" minRequiredPasswordLength="6" minRequiredNonalphanumericCharacters="0" passwordAttemptWindow="10" applicationName="/" />
+      </providers>
+    </membership>
+    <profile>
+      <providers>
+        <clear />
+        <add name="AspNetSqlProfileProvider" type="System.Web.Profile.SqlProfileProvider" connectionStringName="ApplicationServices" applicationName="/" />
+      </providers>
+    </profile>
+    <roleManager enabled="false">
+      <providers>
+        <clear />
+        <add name="AspNetSqlRoleProvider" type="System.Web.Security.SqlRoleProvider" connectionStringName="ApplicationServices" applicationName="/" />
+        <add name="AspNetWindowsTokenRoleProvider" type="System.Web.Security.WindowsTokenRoleProvider" applicationName="/" />
+      </providers>
+    </roleManager>
+  </system.web>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true" />
+    <validation validateIntegratedModeConfiguration="false" />
+    <handlers>
+      <remove name="ChartImageHandler" />
+      <add name="ChartImageHandler" preCondition="integratedMode" verb="GET,HEAD,POST" path="ChartImg.axd" type="System.Web.UI.DataVisualization.Charting.ChartHttpHandler, System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    </handlers>
+    <security>
+
+    </security>
+
+</system.webServer>    
+
+</configuration>
+

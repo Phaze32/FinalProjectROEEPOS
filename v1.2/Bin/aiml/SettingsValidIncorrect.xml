@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<thing value="aiml" name="aimldirectory"/>
+<item val="le value" nom="french"/>
+<item value="configdirectory" name="config"/>
+<item value="logs" name=""/>
+<item value="ok" name="test"/>
+</root>

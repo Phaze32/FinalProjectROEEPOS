@@ -1,0 +1,33 @@
+[ 
+  {
+    "query": "Hello",
+    "intent": "Greeting",
+    "response": "Hi there! How can I help you today?"
+  },
+  {
+    "query": "What is the weather like?",
+    "intent": "Weather",
+    "response": "Unfortunately, I don't have access to weather information yet. But I can tell you a joke!"
+  },
+  {
+    "query": "Tell me a joke",
+    "intent": "Joke",
+    "response": "Why did the scarecrow win an award? Because he was outstanding in his field!"
+  },
+  {
+    "Query": "How are you?",
+    "Intent": "Greeting",
+    "Response": "I'm doing great, thank you!"
+  },
+  {
+    "Query": "What's your name?",
+    "Intent": "Name",
+    "Response": "I'm an AI chatbot."
+  },
+  {
+    "query": "Goodbye",
+    "intent": "Farewell",
+    "response": "See you later! Have a great day!"
+  }
+
+ ]

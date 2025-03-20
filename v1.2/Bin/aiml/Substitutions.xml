@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<item value="" name="=REPLY"/>
+<item value="" name="NAME=RESET"/>
+<item value=" smile " name=":-)"/>
+<item value=" smile " name=":)"/>
+<item value=" smile " name=",)"/>
+<item value=" smile " name=";)"/>
+<item value=" smile " name=";-)"/>
+<item value="" name="""/>
+<item value=" " name="/"/>
+<item value=" gt " name=">"/>
+<item value=" lt " name="<"/>
+<item value=" " name="("/>
+<item value=" " name=")"/>
+<item value=" " name="`"/>
+<item value=" " name=","/>
+<item value=" " name=":"/>
+<item value=" " name="&"/>
+<item value="-" name="-"/>
+<item value=" " name="="/>
+<item value=" la " name="L A"/>
+<item value=" ok " name=" O K "/>
+<item value=" ps " name=" P S "/>
+<item value="oh" name="OHH"/>
+<item value="he" name="HEHE"/>
+<item value="ha" name="HAHA"/>
+<item value="help " name="HELLP"/>
+<item value="because " name="BECAUS"/>
+<item value="believe " name="BELEIVE"/>
+<item value="because " name="BECASUE"/>
+<item value="because " name="BECUASE"/>
+<item value="because " name="BECOUSE"/>
+<item value="reductionism " name="REDUCTIONALISM"/>
+<item value=" it is a " name=" ITS A "/>
+<item value=" yes I " name="NOI"/>
+<item value=" favorite " name="FAV"/>
+<item value=" yes I " name="YESI"/>
+<item value=" yes it " name="YESIT"/>
+<item value=" I am " name="IAM"/>
+<item value=" well I " name="WELLI"/>
+<item value=" well it " name="WELLIT"/>
+<item value=" am fine " name="AMFINE"/>
+<item value=" am an " name="AMAN"/>
+<item value=" am on " name="AMON"/>
+<item value=" am not " name="AMNOT"/>
+<item value="really" name="REALY"/>
+<item value=" I am using " name="IAMUSING"/>
+<item value=" am leaving " name="AMLEAVING"/>
+<item value="yes" name="YEAH"/>
+<item value="yes" name="YEP"/>
+<item value="yes" name="YHA"/>
+<item value="you" name="YOU"/>
+<item value=" want to " name="WANNA"/>
+<item value=" you would " name="YOU'D"/>
+<item value=" you are " name="YOU'RE"/>
+<item value=" you are " name=" YOU RE "/>
+<item value=" you have " name="YOU'VE"/>
+<item value=" you have " name=" YOU VE "/>
+<item value=" you will " name="YOU'LL"/>
+<item value=" you will " name=" YOU LL "/>
+<item value=" you are " name="YOURE"/>
+<item value=" did not " name="DIDNT"/>
+<item value=" did not " name=" DIDN T "/>
+<item value=" did not " name="DID'NT"/>
+<item value=" could not " name="COULDN'T"/>
+<item value=" could not " name=" COULDN T "/>
+<item value=" did not " name="DIDN'T"/>
+<item value=" is not " name="AIN'T"/>
+<item value=" is not " name=" AIN T "/>
+<item value=" is not " name="ISN'T"/>
+<item value=" is not " name=" ISN T "/>
+<item value=" is not " name="ISNT"/>
+<item value=" it is " name="IT'S"/>
+<item value=" it is " name=" IT S "/>
+<item value=" are not " name="ARE'NT"/>
+<item value=" are not " name="ARENT"/>
+<item value=" are not " name="AREN'T"/>
+<item value=" are not " name=" AREN T "/>
+<item value=" are not " name=" ARN T "/>
+<item value=" where is " name="WHERE'S"/>
+<item value=" where is " name=" WHERE S "/>
+<item value=" have not " name="HAVEN'T"/>
+<item value=" have not " name="HAVENT"/>
+<item value=" has not " name="HASN'T"/>
+<item value=" has not " name=" HASN T "/>
+<item value=" were not " name=" WEREN T "/>
+<item value=" were not " name="WEREN'T"/>
+<item value=" were not " name="WERENT"/>
+<item value=" can not " name="CAN'T"/>
+<item value=" can not " name=" CAN T "/>
+<item value=" can not " name="CANT"/>
+<item value=" can not " name="CANNOT"/>
+<item value=" who is " name="WHOS"/>
+<item value=" how is " name="HOW'S"/>
+<item value=" how is " name=" HOW S "/>
+<item value=" how did " name="HOW'D"/>
+<item value=" how did " name=" HOW D "/>
+<item value=" how is " name="HOWS"/>
+<item value=" what is " name="WHATS"/>
+<item value=" name is " name="NAME'S"/>
+<item value=" who is " name="WHO'S"/>
+<item value=" who is " name=" WHO S "/>
+<item value=" what is " name="WHAT'S"/>
+<item value=" what is " name=" WHAT S "/>
+<item value=" that is " name="THAT'S"/>
+<item value=" there is " name="THERE'S"/>
+<item value=" there is " name=" THERE S "/>
+<item value=" there is " name="THERES"/>
+<item value=" that is " name="THATS"/>
+<item value=" does not " name="DOESN'T"/>
+<item value=" does not " name=" DOESN T "/>
+<item value=" does not " name="DOESNT"/>
+<item value=" do not " name="DON'T"/>
+<item value=" do not " name=" DON T "/>
+<item value=" do not " name="DONT"/>
+<item value=" do not " name=" DO NT "/>
+<item value=" do not " name="DO'NT"/>
+<item value=" will not " name="WON'T"/>
+<item value=" will not " name="WONT"/>
+<item value=" will not " name=" WON T "/>
+<item value=" let us " name="LET'S"/>
+<item value=" they are " name="THEY'RE"/>
+<item value=" they are " name=" THER RE "/>
+<item value=" was not " name="WASN'T"/>
+<item value=" was not " name=" WASN T "/>
+<item value=" was not " name="WASNT"/>
+<item value=" had not " name="HADN'T"/>
+<item value=" had not " name=" HADN T "/>
+<item value=" would not " name="WOULDN'T"/>
+<item value=" would not " name=" WOULDN T "/>
+<item value=" would not " name="WOULDNT"/>
+<item value=" should not " name="SHOULDN'T"/>
+<item value=" should not " name="SHOULDNT"/>
+<item value=" favorite " name="FAVOURITE"/>
+<item value=" color " name="COLOUR"/>
+<item value=" we will " name="WE'LL"/>
+<item value=" we will " name=" WE LL "/>
+<item value=" he will " name="HE'LL"/>
+<item value=" he will " name=" HE LL "/>
+<item value=" I will " name="I'LL"/>
+<item value=" I have " name=" IVE "/>
+<item value=" I have " name="I'VE"/>
+<item value=" I have " name=" I VE "/>
+<item value=" I would " name="I'D"/>
+<item value=" I am " name="I'M"/>
+<item value=" I am " name=" I M "/>
+<item value=" we have " name="WE'VE"/>
+<item value=" we are " name="WE'RE"/>
+<item value=" she is " name="SHE'S"/>
+<item value=" she is " name="SHES"/>
+<item value=" she would " name="SHE'D"/>
+<item value=" she would " name=" SHE D "/>
+<item value=" she would " name="SHED"/>
+<item value=" he would " name="HE'D"/>
+<item value=" he would " name=" HE D "/>
+<item value=" he would " name="HED"/>
+<item value=" he is " name="HE'S"/>
+<item value=" we have " name=" WE VE "/>
+<item value=" we are " name=" WE RE "/>
+<item value=" she is " name=" SHE S "/>
+<item value=" he is " name=" HE S "/>
+<item value=" I am a " name="IAMA"/>
+<item value=" I am asking " name="IAMASKING"/>
+<item value=" I am doing " name="IAMDOING"/>
+<item value=" I am from " name="IAMFROM"/>
+<item value=" I am in " name="IAMIN"/>
+<item value=" I am ok " name="IAMOK"/>
+<item value=" I am sorry " name="IAMSORRY"/>
+<item value=" I am talking " name="IAMTALKING"/>
+<item value=" I am tired " name="IAMTIRED"/>
+<item value=" download " name=" DOWN LOAD "/>
+<item value=" remember " name="REMEBER"/>
+<item value=" what " name="WAHT"/>
+<item value="Tollervey" name="TOLLERVY"/>
+<item value=" you are " name=" YOU R "/>
+<item value=" you " name=" U "/>
+<item value=" your " name=" UR "/>
+<item value=" are you " name=" RU "/>
+<item value=" are you " name=" R U "/>
+<item value=" beginscript " name=" {"/>
+<item value=" endscript " name=" }"/>
+<item value=" " name=" \"/>
+<item value=" 0" name=":0"/>
+<item value=" 0" name=": 0"/>
+<item value=" 1" name=":1"/>
+<item value=" 1" name=": 1"/>
+<item value=" 2" name=":2"/>
+<item value=" 2" name=": 2"/>
+<item value=" 3" name=":3"/>
+<item value=" 3" name=": 3"/>
+<item value=" 4" name=":4"/>
+<item value=" 4" name=": 4"/>
+<item value=" 5" name=":5"/>
+<item value=" 5" name=": 5"/>
+<item value=" point 0" name=".0"/>
+<item value=" point 1" name=".1"/>
+<item value=" point 3" name=".2"/>
+<item value=" point 4" name=".4"/>
+<item value=" point 5" name=".5"/>
+<item value=" point 6" name=".6"/>
+<item value=" point 7" name=".7"/>
+<item value=" point 8" name=".8"/>
+<item value=" point 9" name=".9"/>
+<item value=" Dr " name="DR."/>
+<item value=" Dr " name=" DR . "/>
+<item value=" Mr " name="MR."/>
+<item value=" Mrs " name="MRS."/>
+<item value=" St " name="ST."/>
+<item value=" www dot " name="WWW."/>
+<item value=" botspot dot " name="BOTSPOT."/>
+<item value=" amused dot com " name="AMUSED.COM"/>
+<item value=" whatis dot " name="WHATIS."/>
+<item value=" dot com " name=".COM "/>
+<item value=" dot net " name=".NET "/>
+<item value=" dot org " name=".ORG "/>
+<item value=" dot org dot uk " name=".ORG.UK"/>
+<item value=" dot co dot uk " name=".CO.UK"/>
+<item value=" dot edu " name=".EDU "/>
+<item value=" dot uk " name=".UK "/>
+<item value=" dot jp " name=".JP "/>
+<item value=" dot au " name=".AU "/>
+<item value=" dot co " name=".CO"/>
+<item value=" dot ac " name=".AC"/>
+<item value=" ok " name="O.K."/>
+<item value=" ok " name=" O. K. "/>
+<item value=" l l " name="L.L."/>
+<item value=" ps " name="P.S."/>
+<item value=" USA " name=" U S A "/>
+<item value=" USA " name=" U. S. A. "/>
+<item value=" USA " name="U.S.A."/>
+<item value=" USA " name="U.S."/>
+<item value=" PhD " name="PH.D"/>
+<item value=" a " name=" A. "/>
+<item value=" b " name=" B. "/>
+<item value=" c " name=" C. "/>
+<item value=" d " name=" D. "/>
+<item value=" e " name=" E. "/>
+<item value=" f " name=" F. "/>
+<item value=" g " name=" G. "/>
+<item value=" h " name=" H. "/>
+<item value=" i " name=" I. "/>
+<item value=" j " name=" J. "/>
+<item value=" k " name=" K. "/>
+<item value=" l " name=" L. "/>
+<item value=" m " name=" M. "/>
+<item value=" n " name=" N. "/>
+<item value=" p " name=" P. "/>
+<item value=" o " name=" O. "/>
+<item value=" q " name=" Q. "/>
+<item value=" r " name=" R. "/>
+<item value=" s " name=" S. "/>
+<item value=" t " name=" T. "/>
+<item value=" u " name=" U. "/>
+<item value=" v " name=" V. "/>
+<item value=" x " name=" X. "/>
+<item value=" y " name=" Y. "/>
+<item value=" w " name=" W. "/>
+<item value=" z " name=" Z. "/>
+<item value=" jar" name=".JAR"/>
+<item value=" zip" name=".ZIP"/>
+<item value=". " name=", BUT "/>
+<item value=". " name=", AND "/>
+<item value=". " name=",BUT "/>
+<item value=". " name=",AND "/>
+<item value=". " name=" BUT "/>
+<item value=". " name=" AND "/>
+<item value=". I " name=", I "/>
+<item value=". you " name=", YOU "/>
+<item value=". I " name=",I "/>
+<item value=". you " name=",YOU "/>
+<item value=". what " name=", WHAT "/>
+<item value=". what " name=",WHAT "/>
+<item value=". do " name=", DO "/>
+<item value=". do " name=",DO "/>
+</root>

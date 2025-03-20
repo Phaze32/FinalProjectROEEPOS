@@ -1,0 +1,104 @@
+notes
+most of the Javascript needed has been added into POSMain02.aspx some of the ajax calls are done using these functions
+
+posmain.js/protect_delete ln 10
+posdel function pos.min.js ln 77
+Pin Code  possettings.Aspx ln 280
+basket totals => gettotals.aspx
+POS/POSMain02.aspx function get_Totals(TicketID) ln:32
+pos/UpdateTicketProductQty.aspx 
+pos/POSMain02.aspx  $("#paymentZZ").click(function () Line 133:  
+
+ADD CUSTOMERDS
+
+<!-- #include virtual = "/POS/FormCustomerModal.html" --> ln: 578
+<!-- #include virtual = "/POS/FormpayModal.html" -->
+   <form action="/pos/add_customer" id="customer-form" method="post" accept-charset="utf-8"> ln: 11
+   
+   
+   icons from CSS
+  class  fa-database
+   D:\wwwroot\EscapadeMIS_wip_old\Styles\pos.css
+   Line 2248: .fa-database:before {
+    content: "\f1c0"
+	
+D:\wwwroot\EscapadeMIS_wip_old\Scripts\pos003.js	
+customers/addn: 
+Using POSoo3.js 1776
+calls JSON
+$("#customer-form").on("submit", function(e)
+url: base_url+'customers/add'
+
+
+*************************************
+Ajax Call for Pods Are Retrival works
+*************************************
+Initiator Page: POSMain02.aspx
+Javascript/Ajax call: POSMain02.aspx (within page) ln; 47
+Function javascript: function FetchPOds(f)
+Response Page: \POS\GetPODsAjax.aspx
+
+onclientclick="FetchPOds('D'); return false;"
+onclick="FetchPOds('d'); return false;"
+
+
+********************************
+Basket totalas
+********************************
+basket totals => gettotals.aspx
+
+********************************
+********************************
+Submit payment Payment
+* trigggers this function when 
+* payment form submit button is clicked
+********************************
+
+1- fill basket= done
+2- goto payaments with details= 
+3- Process Payments= with details
+
+
+********************************************************
+* Buttons under Basket
+********************************************************
+POSMain02.aspx ln 423 <div id="botbuttons" class="col-xs-12 text-center">
+
+
+***********************************
+Ajax Call to get Payment Received 29/01/24
+***********************************
+
+posmain02.aspx line 271  $("#submit-sale").click(function ()
+
+***********************************
+Form USed to Process Payment Received 29/01/24
+***********************************
+
+<!-- #include virtual = "/POS/FormpayModal.html" -->
+button id main page= paymentZZ
+experiment with getticketno2()
+experiment with getticketno()
+
+
+
+*************************************************************
+Special Popup Note for the transaction
+triggers a popup to record the special node its the dialogue icon
+*************************************************************
+Trigger Button:ln 
+<a role="button" data-toggle="modal" data-target="#noteModal">
+	<i class="fa fa-comment"></i>
+</a>
+Form Triggered through Div:ln 631-647
+<div class="modal" data-easein="flipYIn" id="noteModal" tabindex="-1" role="dialog" aria-labelledby="noteModalLabel" aria-hidden="true">
+
+*************************************************************
+*************************************************************
+ommon Top Bar
+*************************************************************
+/pos/NavBarTop.html
+to define thin top vavigation bar and its liniks 
+starting from the left of page to to right
+
+*************************************************************
