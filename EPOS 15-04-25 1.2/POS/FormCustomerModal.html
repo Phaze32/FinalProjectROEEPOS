@@ -1,0 +1,162 @@
+﻿<script type="text/javascript">
+    $(document).ready(function () {
+        alert("Page Loaded. Ready to Fetch Customer Data!");
+        const defaultCustomerID = 8; // Default userID
+        defaultCustomerID = modalData.CustomerID
+        fetchCustomerData(defaultCustomerID); // Trigger the AJAX call
+        $('#getdata').click(function () {
+            fetchCustomerData(defaultCustomerID); // Trigger the AJAX call
+        });
+    });
+
+
+    function myFunc(f) {
+        // f = "ddd";
+        // alert("Test ok!" + "PLUid=" + f);
+        get_product(f);
+    };
+    // Fetch user data and populate form
+    function fetchCustomerData(CustomerID) {
+        $.ajax({
+            url: '/Handlers/CustomerHandler.ashx',
+            type: 'GET',
+            dataType: 'json',
+            data: { CustomerID: CustomerID },
+            success: function (data) {
+                console.log("AJAX Response:", data);
+
+                // Check if the response contains an array under 'data'
+                if (data && Array.isArray(data.data)) {
+                    // Find the customer with the matching CustomerID
+                    const modalData = data.data.find(user => String(user.CustomerID) === String(CustomerID));
+
+                    if (modalData) {
+                        // Populate the modal fields with the customer's data
+                        $('#editCustomerID').val(modalData.CustomerID);
+                        $('#editForeName').val(modalData.ForeName);
+                        $('#editSurName').val(modalData.SurName);
+                        $('#editAddress').val(modalData.address);  // Fixed casing
+                        $('#editPostCode').val(modalData.PostCode);
+                        $('#editCity').val(modalData.City);  // Uncommented
+                        $('#editPhoneNumber').val(modalData.PhoneNumber);
+                        $('#editEmail').val(modalData.Email);
+
+                        // Show the modal with the user data
+                        $('#customerModal').modal('show');
+                    } else {
+                        // Notify if no match is found
+                        alert('No data found for the specified CustomerID.');
+                    }
+                } else {
+                    // Handle unexpected response format
+                    alert('Unexpected data format or missing "data" property!');
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                // Provide more detailed error logging
+                console.error('AJAX Error:', textStatus, errorThrown);
+                alert('Error fetching data from the server. Please try again later.');
+            }
+        });
+    }
+</script>
+<style>
+    /* Style for the modal backdrop */
+    .modal-backdrop {
+        background-color: rgba(0, 0, 0, 0.1); /* Black with 50% transparency */
+    }
+
+    /* Style for the modal itself */
+    .modal {
+        background: rgba(255, 255, 255, 0.1); /* White with 80% transparency */
+        backdrop-filter: blur(5px); /* Adds a subtle blur effect */
+        border-radius: 10px; /* Rounded corners for a polished look */
+    }
+
+    /* Optional: Style for the modal content */
+    .modal-content {
+        border: 2px solid #ccc; /* Adds a border to the content */
+        padding: 20px; /* Space inside the modal content */
+    }
+
+    /* Optional: Style for close button inside the modal */
+    .modal-header .btn-close {
+        color: #000;
+    }
+
+</style>
+<!-- *************************************************************************** -->
+<!-- form is triggered through ajax function in file scripts\posmain.js line 164 -->
+<!-- ************************************************************************ -->
+<div class="modal" data-easein="flipYIn" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="cModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title" id="cModalLabel">
+                    Add Customer
+                </h4>
+            </div>
+            <!-- Add Customer Form-->
+            <form action="get_customer(this);" id="customer-form" method="post" accept-charset="utf-8">
+                <input type="hidden" name="spos_token" value="1479a37b6443485bdaaf75fb256d1484" />
+                <div class="modal-body">
+                    <div id="c-alert" class="alert alert-danger" style="display:none;"></div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <input type="text" id="editCustomerID" name="CustomerID" />
+                                <label class="control-label" for="code">First Name</label>
+                                <input type="text" id="editForeName" name="name_placeholder_Name" value="" class="form-control input-sm kb-text"  />
+                                <label class="control-label" for="code">Sur Name</label>
+                                <input type="text" id="editSurName" name="sur_name_placeholder_Name" value="" class="form-control input-sm kb-text"  />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="cemail">Email Address</label>
+                                <input type="text" id="editEmail" name="email_placeholder_Name" value="" class="form-control input-sm kb-text"  />
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="phone">Phone</label>
+                                <input type="text" name="phone" id="editPhoneNumber" value="" class="form-control input-sm kb-pad"  />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="cf1">Address 1</label>
+                                <input type="text" name="cf1_placeholder_Name" value="" class="form-control input-sm kb-text" id="editAddress" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="cf2">Address 2</label>
+                                <input type="text" name="cf2_placeholder_Name" value="" class="form-control input-sm kb-text" id="cf2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="postcode">Post Code</label>
+                                <input type="text" id="editPostCode" name="postcode_placeholder_Name" value="" class="form-control input-sm kb-text"  />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer" style="margin-top:0;">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal"> Close </button>
+                    <button type="button" class="btn btn-primary" id="add_customerQ" onclick="get_customer(this)"> Add Customer</button>
+                </div>
+                <div id="result"> result </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Check Date and Trigger Date Picker</title>
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Include jQuery UI CSS and JS for the Datepicker and Dialog -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Initialize the datepicker
+            $("#datepicker").datepicker({
+                dateFormat: "dd/mm/yy", // Set the date format to British DD/MM/YYYY
+                onSelect: function(dateText) {
+                    // Set the selected date in the hidden input field
+                    $("#selected_date").val(dateText);
+                    console.log("Selected date: " + dateText);
+                    // Close the dialog after a date is selected
+                    $("#datepicker-dialog").dialog("close");
+                }
+            });
+
+            // Initialize the dialog
+            $("#datepicker-dialog").dialog({
+                autoOpen: false, // Don't open the dialog automatically
+                modal: true, // Make it a modal dialog
+                title: "Select a Date"
+            });
+
+            // Function to open the datepicker dialog
+            function openDatePickerDialog() {
+                $("#datepicker-dialog").dialog("open");
+            }
+
+            // Main function to handle date picker logic
+            function handleDatePicker() {
+                openDatePickerDialog();
+            }
+
+            // Function to check if the inner HTML of CollectDate is a valid date
+            function checkCollectDate() {
+                var collectDateText = $("#CollectDate").html();
+                var isValidDate = !isNaN(Date.parse(collectDateText));
+
+                if (!isValidDate) {
+                    handleDatePicker();
+                }
+            }
+
+            // Bind the handleDatePicker function to the input click event
+            $("#open_datepicker_button").click(function() {
+                handleDatePicker();
+            });
+
+            // Display the selected date as an alert when the button is clicked
+            $("#display_selected_date_button").click(function() {
+                var selectedDate = $("#selected_date").val();
+                alert("Selected date: " + selectedDate);
+            });
+
+            // Check the CollectDate inner HTML when the document is ready
+            checkCollectDate();
+        });
+    </script>
+</head>
+<body>
+    <h1>Select a Date</h1>
+    <input type="text" data-placeholder="Give date" id="selected_date" name="selected_date" size="10" onclick="handleDatePicker()">
+    <button id="open_datepicker_button">Open Date Picker</button>
+    <button id="display_selected_date_button">Display Selected Date</button>
+    <!-- Hidden input field to store the selected date -->
+    <input type="hidden" id="selected_date" name="selected_date">
+    <!-- Div for the Datepicker dialog -->
+    <div id="datepicker-dialog">
+        <!-- Div for the Datepicker -->
+        <div id="datepicker"></div>
+    </div>
+    <!-- Element with CollectDate ID -->
+    <div id="CollectDate">SomeText</div>
+</body>
+</html>

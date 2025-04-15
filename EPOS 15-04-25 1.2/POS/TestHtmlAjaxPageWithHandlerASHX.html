@@ -1,0 +1,45 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="POSCustomerList.aspx.vb" Inherits="POSCustomerList" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script charset="utf-8">
+        $(document).ready(function () {
+            alert('AJAX call triggerd!');
+            var table = $('#catData').DataTable({
+                'ajax': {
+                    url: 'Handlers/CustomerHandler.ashx',
+                    type: 'GET',
+                    dataType: 'json',
+                    dataSrc: 'data', // Specify the data source in the returned JSON
+                    success: function (data) {
+                        alert('AJAX call was successful!');
+                        console.log(data);
+                    },
+                    error: function (error) {
+                        alert('AJAX call failed!');
+                        console.error('Error fetching customer data', error);
+                    }
+                },
+                "columns": [
+                    { "data": "CustomerID" },
+                    { "data": "Name" },
+                    { "data": "SurName" },
+                    { "data": "address" },
+                    { "data": "PostCode" },
+                    { "data": "City" },
+                    { "data": "PhoneNumber" },
+                    { "data": "Email" },
+                    { "data": "Status" }
+                ]
+            });
+        });
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Peaches and Clean Invoice</title>
+    <style>
+        /* Popup container styling */
+        #invoicePopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 34%;
+            max-width: 100%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            border-radius: 10px;
+            z-index: 1000;
+            overflow-x: auto;
+            font-size: clamp(10px, 2vw, 16px);
+        }
+
+        /* Overlay styling */
+        #popupOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        /* Center alignment for Serial Number, Qty, and Price columns */
+        .center-column {
+            text-align: center;
+        }
+
+        /* Right alignment for Total column */
+        .right-column {
+            text-align: right;
+            font-family: monospace;
+        }
+
+        /* Header styling */
+        .invoice-header {
+            margin-bottom: 15px;
+        }
+
+        .header-row1 {
+            text-align: center;
+            font-size: 1.25em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .header-row2 {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        .header-row3 {
+            text-align: left;
+            font-size: 0.9em;
+        }
+
+        /* Company name styling */
+        .company-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Disclaimer styling */
+        .disclaimer {
+            font-size: 0.7em;
+            color: #555;
+            text-align: justify;
+            margin-top: 15px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        /* Button styling */
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+        /* Print-specific styling */
+        @media print {
+            #invoicePopup {
+                font-size: 8px !important; /* Reduce font size for printing */
+            }
+
+            .header-row3 {
+                font-size: 7px !important; /* Further reduced font size */
+            }
+
+            button {
+                display: none;
+            }
+
+            #popupOverlay {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Overlay -->
+    <div id="ordercontainer">
+        <div id="popupOverlay" onclick="hideInvoice()"></div>
+
+        <!-- Invoice Popup -->
+        <div id="invoicePopup">
+            <!-- Company Name -->
+            <div class="company-name">
+                Peaches and Clean Dry Cleaning
+            </div>
+            <!-- Invoice Header -->
+            <div class="invoice-header">
+                <div class="header-row1">
+                    Invoice #<span id="ticketInfo"></span>
+                </div>
+                <div class="header-row2">
+                    <div>Customer: <span id="customerInfo"></span></div>
+                    <div style="text-align: right;">Pieces: <span id="totalQty"></span></div>
+                </div>
+                <div class="header-row3">
+                    Received: <span id="dateReceivedInfo"></span> | Promised: <span id="detePromisedInfo"></span>
+                </div>
+            </div>
+            <!-- Invoice Table -->
+            <table>
+                <colgroup>
+                    <col style="width: 8%;"> <!-- Serial Number -->
+                    <col style="width: 40%;"> <!-- Product -->
+                    <col style="width: 17%;"> <!-- Price -->
+                    <col style="width: 15%;"> <!-- Qty -->
+                    <col style="width: 20%;"> <!-- Total -->
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th class="center-column">#</th>
+                        <th>Product</th>
+                        <th class="center-column">Price (£)</th>
+                        <th class="center-column">Qty</th>
+                        <th class="right-column">Total (£)</th>
+                    </tr>
+                </thead>
+                <tbody id="invoiceTableBody"></tbody>
+
+            </table>
+            <div style="text-align:center">Thankyou For Your Trust</div>
+            <br>
+            <div style="text-align:center">Our Opening Hours 9AM to 6PM </div>
+            <!-- Disclaimer -->
+            <div class="disclaimer">
+                Disclaimer: Stains may not be completely removed, zips may get damaged during the cleaning process, and color bleeding may occur.
+                If items are not collected within 30 days, they may be disposed of or storage charges will be added at £10 per month.
+                Additionally, items may shrink or fade, and buttons can break or come off.
+                Peaches and Clean Dry Cleaning takes no responsibility for any of these issues.
+            </div>
+            <!-- Buttons -->
+            <div style="text-align: center; margin-top: 15px;">
+                <button onclick="window.print()">Print Invoice</button>
+                <button onclick="hideInvoice()">Close</button>
+            </div>
+        </div>
+
+        <script>
+            function fetchInvoiceData(ticketID) {
+                const url = `../Handlers/InvoiceDetailHandler.ashx?ticketid=${ticketID}`;
+
+                // Fetch the JSON data from the handler
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        const relevantData = data.data.map(item => ({
+                            TicketID: item.TicketID,
+                            ForeName: item.ForeName,
+                            SurName: item.SurName,
+                            City: item.City,
+                            Qty: item.Qty,
+                            PLUPrice: item.PLUPrice,
+                            PLUDescription: item.PLUDescription,
+                            TicketDate: item.TicketDate,
+                            CollectDate: item.CollectDate,
+                            CollectTime: item.CollectTime
+                        }));
+
+                        populateInvoice(relevantData);
+                    })
+                    .catch(error => console.error("Error fetching invoice data:", error));
+            }
+
+            function populateInvoice(invoiceData) {
+                const tableBody = document.getElementById("invoiceTableBody");
+                let itemsTotal = 0;
+                let totalQuantity = 0;
+                const discount = 5.00; // Example discount, replace with dynamic value if needed
+
+                // Populate header data
+                const firstItem = invoiceData[0];
+                document.getElementById("ticketInfo").textContent = firstItem.TicketID;
+                document.getElementById("customerInfo").textContent = `${firstItem.ForeName} ${firstItem.SurName}`;
+                document.getElementById("dateReceivedInfo").textContent = `${firstItem.TicketDate}`;
+                document.getElementById("detePromisedInfo").textContent = `${firstItem.CollectDate} at ${firstItem.CollectTime}`;
+
+                tableBody.innerHTML = ""; // Clear table body
+
+                // Populate item rows
+                invoiceData.forEach((item, index) => {
+                    const itemTotal = item.Qty * item.PLUPrice;
+                    itemsTotal += itemTotal;
+                    totalQuantity += item.Qty;
+
+                    tableBody.innerHTML += `
+                    <tr>
+                        <td class="center-column">${index + 1}</td>
+                        <td>${item.PLUDescription}</td>
+                        <td class="center-column">£${item.PLUPrice.toFixed(2)}</td>
+                        <td class="center-column">${item.Qty}</td>
+                        <td class="right-column">£${itemTotal.toFixed(2)}</td>
+                    </tr>
+                `;
+                });
+
+                // Add Total row
+                tableBody.innerHTML += `
+                <tr>
+                    <td colspan="4" style="text-align: right;"><strong>Total:</strong></td>
+                    <td class="right-column">£${itemsTotal.toFixed(2)}</td>
+                </tr>
+            `;
+
+                // Add Discount row
+                tableBody.innerHTML += `
+                <tr>
+                    <td colspan="4" style="text-align: right;"><strong>Discount:</strong></td>
+                    <td class="right-column">£${discount.toFixed(2)}</td>
+                </tr>
+            `;
+
+                // Add Final Total row (Total after discount)
+                const finalTotal = itemsTotal - discount;
+                tableBody.innerHTML += `
+                <tr>
+                    <td colspan="4" style="text-align: right;"><strong>Final Total:</strong></td>
+                    <td class="right-column">£${finalTotal.toFixed(2)}</td>
+                </tr>
+            `;
+
+                document.getElementById("totalQty").textContent = totalQuantity;
+
+                // Show popup
+                document.getElementById("popupOverlay").style.display = "block";
+                document.getElementById("invoicePopup").style.display = "block";
+            }
+
+            function hideInvoice() {
+                document.getElementById("popupOverlay").style.display = "none";
+                document.getElementById("invoicePopup").style.display = "none";
+            }
+
+            // Example call (replace with dynamic ticketID as needed)
+            window.onload = function () {
+                // Extract TicketID from query string
+                const params = new URLSearchParams(window.location.search);
+                const ticketID = params.get("TicketID");
+
+                if (ticketID) {
+                    fetchInvoiceData(ticketID); // Use the extracted TicketID
+                } else {
+                    console.error("TicketID not found in the query string");
+                }
+
+            };
+        </script>
+ 
+    </div>
+</body>
+</html>

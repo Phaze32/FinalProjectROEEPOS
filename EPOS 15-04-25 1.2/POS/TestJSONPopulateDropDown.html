@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Populate Dropdown</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            function fetchData(searchData) {
+                console.log('Fetching data with search term:', searchData);  // Debug log
+                $.ajax({
+                    url: 'AddEditCustomer.aspx',
+                    dataType: 'json',
+                    data: { act: 'searchcustomers', query: searchData },
+                    success: function (data) {
+                        console.log('Data fetched successfully:', data);  // Debug log
+                        populateDropdown(data);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Failed to fetch data: ', status, error);
+                    }
+                });
+            }
+
+            function populateDropdown(data) {
+                console.log('Populating dropdown with data:', data);  // Debug log
+                var dropdown = $('#customer-dropdown');
+                dropdown.empty(); // Clear existing options
+                dropdown.append('<option selected="true" disabled>Choose Customer</option>');
+                dropdown.prop('selectedIndex', 0);
+
+                $.each(data, function (key, entry) {
+                    dropdown.append($('<option></option>').attr('value', entry.id).text(entry.name));
+                });
+            }
+
+            // Fetch the data and populate the dropdown on page load
+            fetchData("man");
+        });
+    </script>
+</head>
+<body>
+    <h1>Customer List</h1>
+    <select id="customer-dropdown" style="width: 100%;"></select>
+</body>
+</html>

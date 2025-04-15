@@ -1,0 +1,25 @@
+/**
+ * @category    Mana
+ * @package     ManaPro_FilterColors
+ * @copyright   Copyright (c) http://www.manadev.com
+ * @license     http://www.manadev.com/license  Proprietary License
+ */
+.m-filter-colors {overflow: hidden; width: 100%; margin-bottom: 10px;}
+.horizontal .m-color {float: left; margin: 5px; position: relative;}
+.m-filter-colors .m-color.selected {}
+.m-color.selected .color-selected {
+    background: url(../images/clr-chkd.png) no-repeat scroll right 0;
+    float: left;
+    height: 10px;
+    left: 8px;
+    position: absolute;
+    top: 9px;
+    width: 10px;
+}
+.mfv-20996.selected .color-selected {background: url("../images/clr-chkd.png") no-repeat scroll left 0 rgba(0, 0, 0, 0); left: 10px;}
+.m-filter-colors.vertical li { margin:  4px 0 0; }
+.state.m-color { display:  inline-block; margin-left: 3px; }
+
+.m-filter-colors.labels li { overflow: hidden; margin: 4px 0 0; }
+.m-filter-colors.labels .m-color { float: left; margin: 0 4px 0; }
+.m-filter-colors.labels li a { text-decoration: none; }
