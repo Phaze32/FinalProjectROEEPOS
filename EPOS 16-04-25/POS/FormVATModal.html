@@ -1,0 +1,53 @@
+﻿<script type="text/javascript">
+    function myFunc(f) {
+        // f = "ddd";
+        // alert("Test ok!" + "PLUid=" + f);
+        get_product(f);
+    };
+    function get_customer() {
+        alert('hhh##FormCustomerModal');
+        alert('ln9.FormCustomerModal.html.get_customer.ln:9 pos/AddEditCustomer.aspx?' + 'cname=' + cname.value + '&sname=' + sname.value + '&cemail=' + cemail.value + '&cphone=' + cphone.value + '&cf1=' + cf1.value + '&cf2=' + cf2.value + '&cpostcode=' + cpostcode.value + 'zzz');
+        // alert('FormCustomerModal.html.get_customer.ln:9 /pos/add_customer.aspx' + 'cname=' + cname.value + '&sname=' + sname.value + '&cemail=' + cemail.value + '&cphone=' + cphone.value + '&cf1=' + cf1.value + '&cf2=' + cf2.value + '&cpostcode=' + cpostcode.value  );
+        // Retrieve TicketID from query string
+        var urlParams = new URLSearchParams(window.location.search);
+        var ticketID = urlParams.get('TicketID');
+
+        var mdata = 'Forename=' + cname.value + '&Surname=' + sname.value + '&EMail=' + cemail.value + '&Telephone=' + cphone.value + '&AddressStreet=' + cf1.value + '&AddressTown=' + cf2.value + '&Postcode=' + cpostcode.value + '&TicketID=' + ticketID;
+
+        alert('ln12.get_customer##mdata='+ mdata + '##')
+        $.ajax({
+            type: "get",
+            url: "/pos/addeditcustomer.aspx?",
+            data: "act=addcustomer&" + mdata,
+            success: function (msg) {
+                // alert('get_product.ln:22 msg=' + msg);
+                $("#result").html(msg);
+
+                //setTimeout(function(){$.unblockUI}, 50 );
+                // $.unblockUI();
+            }
+        });
+        get_Totals("66");
+    };
+</script>
+<!-- *************************************************************************** -->
+<!-- form is triggered through ajax function in file scripts\posmain.js line 164 -->
+<!-- *************************************************************************** -->
+<div class="modal" data-easein="flipYIn" id="tsModal" tabindex="-1" role="dialog" aria-labelledby="tsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title" id="tsModalLabel">Tax (5 or 5%)</h4>
+            </div>
+            <div class="modal-body">
+                <input type='text' class='form-control input-sm kb-pad' id='get_ts' onClick='this.select();' value=''>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-sm pull-left" data-dismiss="modal">Close</button>
+                <button type="button" id="updateTax" class="btn btn-primary btn-sm">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+

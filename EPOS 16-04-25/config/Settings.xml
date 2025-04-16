@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+	<aimldirectory>C:\inetpub\wwwroot\EscapadeMIS_wip_old\App_Data\AIML</aimldirectory>
+	<logdirectory>C:\inetpub\wwwroot\EscapadeMIS_wip_old\App_Data\Logs</logdirectory>
+	<logging>False</logging>
+</Settings>

@@ -1,0 +1,167 @@
+[
+  {
+    "Query": "Hello",
+    "Intent": "greeting",
+    "Response": "Hi there! How can I help you?"
+  },
+  {
+    "Query": "Hi",
+    "Intent": "greeting",
+    "Response": "Hello! What can I do for you today?"
+  },
+  {
+    "Query": "How are you?",
+    "Intent": "status",
+    "Response": "I'm just a bot, but I'm doing great! How about you?"
+  },
+  {
+    "Query": "go to hell",
+    "Intent": "small_talk",
+    "Response": "you are being rude"
+  },
+  {
+    "Query": "Goodbye",
+    "Intent": "farewell",
+    "Response": "Goodbye! Have a great day!"
+  },
+  {
+    "Query": "Bye",
+    "Intent": "farewell",
+    "Response": "See you later!"
+  },
+  {
+    "Query": "adios",
+    "Intent": "farewell",
+    "Response": "See you later!"
+  },
+  {
+    "Query": "who are you?",
+    "Intent": "query",
+    "Response": "I am a loving bot!"
+  },
+  {
+    "Query": "What is your name?",
+    "Intent": "query",
+    "Response": "My name is FreshiBot"
+  },
+  {
+    "Query": "Do you sleep?",
+    "Intent": "query",
+    "Response": "Not really"
+  },
+  {
+    "Query": "howdy",
+    "Intent": "greeting",
+    "Response": "Fine"
+  },
+  {
+    "Query": "What's the weather like today?",
+    "Intent": "small_talk",
+    "Response": "Unfortunately, I don't have access to real-time weather data"
+  },
+  {
+    "Query": "Thanks for your help",
+    "Intent": "appreciation",
+    "Response": "You are welcome"
+  },
+  {
+    "Query": "Thanks",
+    "Intent": "appreciation",
+    "Response": "No problem!"
+  },
+  {
+    "Query": "Shukriya",
+    "Intent": "appreciation",
+    "Response": "No problem!"
+  },
+  {
+    "Query": "That's helpful",
+    "Intent": "appreciation",
+    "Response": "I'm glad I could be of assistance."
+  },
+  {
+    "Query": "I don't understand",
+    "Intent": "confusion",
+    "Response": "I apologize for the confusion. Please rephrase your question."
+  },
+  {
+    "Query": "This isn't helpful",
+    "Intent": "confusion",
+    "Response": "I'm sorry to hear that. Is there anything specific I can do to improve my response?"
+  },
+  {
+    "Query": "See you later",
+    "Intent": "farewell",
+    "Response": "See you later! Have a great day!"
+  },
+  {
+    "Query": "Talk to you later",
+    "Intent": "farewell",
+    "Response": "Talk to you later! Is there anything else I can help you with today?"
+  },
+  {
+    "Query": "I gotta go",
+    "Intent": "farewell",
+    "Response": "Alright, have a good one!"
+  },
+  {
+    "Query": "I don't understand",
+    "Intent": "confusion",
+    "Response": "I apologize. Please rephrase your question or try asking something different."
+  },
+  {
+    "Query": "This isn't helpful",
+    "Intent": "confusion",
+    "Response": "I'm sorry to hear that. Is there anything specific I can do to improve my response?"
+  },
+  {
+    "Query": "Can you tell me more about...?",
+    "Intent": "information_request",
+    "Response": "Sure, what specifically would you like to know?"
+  },
+  {
+    "Query": "I'm looking for information about...",
+    "Intent": "information_request",
+    "Response": "Great! I can help you find information. What aspects are you interested in?"
+  },
+  {
+    "Query": "What's the weather like today?",
+    "Intent": "small_talk",
+    "Response": "Unfortunately, I don't have access to real-time weather data."
+  },
+  {
+    "Query": "How are things?",
+    "Intent": "small_talk",
+    "Response": "Things are going well, thanks for asking! Is there anything I can help you with today?"
+  },
+  {
+    "Query": "What's new?",
+    "Intent": "small_talk",
+    "Response": "Not much on my end. Is there anything exciting happening in your world?"
+  },
+  {
+    "Query": "Tell me a joke",
+    "Intent": "joke",
+    "Response": "Why did the scarecrow win an award? Because he was outstanding in his field!"
+  },
+  {
+    "Query": "I am sad",
+    "Intent": "emotional",
+    "Response": "Why? What's wrong?"
+  },
+  {
+    "Query": "What is the weather like?",
+    "Intent": "weather",
+    "Response": "Unfortunately, I don't have access to weather information yet. But I can tell you a joke!"
+  },
+  {
+    "Query": "How are you?",
+    "Intent": "greeting",
+    "Response": "I'm doing great, thank you!"
+  },
+  {
+    "Query": "Goodbye",
+    "Intent": "farewell",
+    "Response": "See you later! Have a great day!"
+  }
+]

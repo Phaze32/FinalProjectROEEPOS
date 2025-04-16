@@ -1,0 +1,1 @@
+function validateCreditCard(e){var t="0123456789";var n="";for(i=0;i<e.length;i++){x=e.charAt(i);if(t.indexOf(x,0)!=-1)n+=x}j=n.length/2;k=Math.floor(j);m=Math.ceil(j)-k;c=0;for(i=0;i<k;i++){a=n.charAt(i*2+m)*2;c+=a>9?Math.floor(a/10+a%10):a}for(i=0;i<k+m;i++)c+=n.charAt(i*2+1-m)*1;return c%10==0}

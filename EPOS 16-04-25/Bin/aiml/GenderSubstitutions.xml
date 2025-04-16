@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<item value=" she " name=" HE "/>
+<item value=" he " name=" SHE "/>
+<item value=" to her " name=" TO HIM "/>
+<item value=" for her " name=" FOR HIM "/>
+<item value=" with her " name=" WITH HIM "/>
+<item value=" on her " name=" ON HIM "/>
+<item value=" in her " name=" IN HIM "/>
+<item value=" to him " name=" TO HER "/>
+<item value=" for him " name=" FOR HER "/>
+<item value=" with him " name=" WITH HER "/>
+<item value=" on him " name=" ON HER "/>
+<item value=" in him " name=" IN HER "/>
+<item value=" her " name=" HIS "/>
+<item value=" his " name=" HER "/>
+<item value=" her " name=" HIM "/>
+</root>

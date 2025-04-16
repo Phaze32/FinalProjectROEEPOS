@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailor Measurement Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+            .form-container h2,
+            .form-container h4 {
+                text-align: center;
+                margin: 0;
+            }
+
+            .form-container .title-container {
+                line-height: 1.2;
+                margin-bottom: 20px;
+            }
+
+            .form-container label {
+                font-weight: bold;
+            }
+
+            .form-container input[type="text"],
+            input[type="number"],
+            input[type="date"],
+            select,
+            textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            .form-container textarea {
+                resize: vertical;
+                min-height: 80px;
+            }
+
+            .form-container button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+                .form-container button:hover {
+                    background-color: #45a049;
+                }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="title-container">
+            <h2>Peaches And Clean</h2>
+            <h2>Feltham</h2>
+            <h4>Phone: 02088908668</h4>
+        </div>
+        <form id="tailorForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email">
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="date">Date (editable):</label>
+            <input type="date" id="date" name="date" value="">
+
+            <label for="shoulder">Shoulder (in inches):</label>
+            <input type="number" id="shoulder" name="shoulder" placeholder="Enter shoulder measurement" required>
+
+            <label for="sleeves">Sleeves (in inches):</label>
+            <input type="number" id="sleeves" name="sleeves" placeholder="Enter sleeve length" required>
+
+            <label for="cuff">Cuff (in inches):</label>
+            <input type="number" id="cuff" name="cuff" placeholder="Enter cuff measurement">
+
+            <label for="chest">Chest (in inches):</label>
+            <input type="number" id="chest" name="chest" placeholder="Enter chest measurement" required>
+
+            <label for="waist">Waist (in inches):</label>
+            <input type="number" id="waist" name="waist" placeholder="Enter waist measurement" required>
+
+            <label for="hips">Hips (in inches):</label>
+            <input type="number" id="hips" name="hips" placeholder="Enter hip measurement">
+
+            <label for="thigh">Thigh (in inches):</label>
+            <input type="number" id="thigh" name="thigh" placeholder="Enter thigh measurement">
+
+            <label for="inseam">Inseam (in inches):</label>
+            <input type="number" id="inseam" name="inseam" placeholder="Enter inseam length" required>
+
+            <label for="leg_opening">Leg Opening (in inches):</label>
+            <input type="number" id="leg_opening" name="leg_opening" placeholder="Enter leg opening measurement">
+
+            <label for="height">Height (in inches):</label>
+            <input type="number" id="height" name="height" placeholder="Enter your height" required>
+
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" name="notes" placeholder="Special requests or details"></textarea>
+
+            <button type="submit">Submit Measurements</button>
+        </form>
+    </div>
+
+    <script>
+        // Set the current date as the default value in the date input field
+        document.getElementById('date').value = new Date().toISOString().split('T')[0];
+    </script>
+</body>
+</html>

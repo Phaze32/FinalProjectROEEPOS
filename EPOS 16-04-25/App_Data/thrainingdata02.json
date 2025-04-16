@@ -1,0 +1,17 @@
+[
+  {
+    "Query": "hello",
+    "Intent": "greeting",
+    "Response": "Hello! How can I help you today?"
+  },
+  {
+    "Query": "bye",
+    "Intent": "farewell",
+    "Response": "Goodbye! Have a great day!"
+  },
+  {
+    "Query": "weather",
+    "Intent": "weather",
+    "Response": "The weather is sunny with a slight chance of rain later today."
+  }
+]

@@ -1,0 +1,154 @@
+﻿<!-- *************************************************************************** -->
+<!--form is triggered through ajax function in file scripts\posmain.js line 164 -- >
+<!-- *************************************************************************** -->
+<style>
+    /* Style for the modal backdrop */
+    .modal-backdrop {
+        background-color: rgba(0, 0, 0, 0.1); /* Black with 50% transparency */
+    }
+
+    /* Style for the modal itself */
+    .modal {
+        background: rgba(255, 255, 255, 0.1); /* White with 80% transparency */
+        backdrop-filter: blur(5px); /* Adds a subtle blur effect */
+        border-radius: 10px; /* Rounded corners for a polished look */
+    }
+
+    /* Optional: Style for the modal content */
+    .modal-content {
+        border: 2px solid #ccc; /* Adds a border to the content */
+        padding: 20px; /* Space inside the modal content */
+    }
+
+    /* Optional: Style for close button inside the modal */
+    .modal-header .btn-close {
+        color: #000;
+    }
+
+    @keyframes flipYIn {
+        0% {
+            transform: perspective(1000px) rotateY(90deg); /* Start flipped */
+            opacity: 0; /* Hidden */
+        }
+
+        100% {
+            transform: perspective(1000px) rotateY(0); /* End in normal view */
+            opacity: 1; /* Fully visible */
+        }
+    }
+
+    /* Apply the animation to the modal */
+    .modal.flipYIn {
+        animation: flipYIn 0.3s ease-in-out; /* Animation duration and easing */
+        transform-origin: center; /* Set the transformation origin */
+    }
+</style>
+<div class="modal" data-easein="flipYIn" id="UserModal" tabindex="-1" role="dialog" aria-labelledby="cModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title" id="editModalLabel">Edit User</h4>
+            </div>
+            <form id="editForm" method="post">
+                <div class="modal-body">
+                    <input type="hidden" id="editUserID" name="UserID" />
+                    <div class="form-group">
+                        <label for="editForeName">First Name</label>
+                        <input type="text" id="editForeName" name="ForeName" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editSurName">Sur Name</label>
+                        <input type="text" id="editSurName" name="SurName" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editAddress">Address</label>
+                        <input type="text" id="editAddress" name="Address" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editPostCode">Post Code</label>
+                        <input type="text" id="editPostCode" name="PostCode" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editCity">City</label>
+                        <input type="text" id="editCity" name="City" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editPhoneNumber">Phone Number</label>
+                        <input type="text" id="editPhoneNumber" name="PhoneNumber" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editEmail">Email</label>
+                        <input type="email" id="editEmail" name="Email" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editLogin">Login</label>
+                        <input type="text" id="editLogin" name="Login" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editPassword">Password</label>
+                        <input type="password" id="editPassword" name="Password" class="form-control" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" id="getdata" onclick="">Get User Data</button>
+
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        alert("Page Loaded. Ready to Fetch Data!");
+        const defaultUserID = 8; // Default userID
+        defaultUserID = modalData.userID
+        fetchUserData(defaultUserID); // Trigger the AJAX call
+        $('#getdata').click(function () {
+            fetchUserData(defaultUserID); // Trigger the AJAX call
+        });
+    });
+
+    // Fetch user data and populate form
+    function fetchUserData(userId) {
+        $.ajax({
+            url: '/Handlers/UsersHandlerNew.ashx',
+            type: 'GET',
+            dataType: 'json',
+            data: { userId: userId },
+            success: function (data) {
+                console.log("AJAX Response:", data);
+
+                if (data && Array.isArray(data.data)) {
+                    const modalData = data.data.find(user => String(user.userID) === String(userId));
+
+                    if (modalData) {
+                        $('#editUserID').val(modalData.userID);
+                        $('#editForeName').val(modalData.ForeName);
+                        $('#editSurName').val(modalData.SurName);
+                        $('#editAddress').val(modalData.address);  // Fixed casing
+                        $('#editPostCode').val(modalData.PostCode);
+                        $('#editCity').val(modalData.City);
+                        $('#editPhoneNumber').val(modalData.PhoneNumber);
+                        $('#editEmail').val(modalData.Email);
+                        $('#editLogin').val(modalData.Login);
+                        $('#editPassword').val(modalData.Password);
+
+                        // Show the modal with user data
+                        $('#UserModal').modal('show');
+                    } else {
+                        alert('No data found for this user.');
+                    }
+                } else {
+                    alert('Unexpected data format or no response!');
+                }
+            },
+            error: function () {
+                alert('Error fetching data from the server!');
+            }
+        });
+    };
+
+</script>

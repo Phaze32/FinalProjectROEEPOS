@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1" xmlns="http://alicebot.org/2001/AIML-1.0.1">
+  <category>
+    <pattern>HELLO</pattern>
+    <template>Hello! How can I help you today?</template>
+  </category>
+  <category>
+    <pattern>WHAT IS YOUR NAME</pattern>
+    <template>My name is Chatbot.</template>
+  </category>
+  <category>
+    <pattern>WHAT IS AIML</pattern>
+    <template>AIML stands for Artificial Intelligence Markup Language. It is used to create natural language software agents.</template>
+  </category>
+</aiml>
