@@ -1,0 +1,308 @@
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\bin\Debug\POSInventorySystem.exe
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\bin\Debug\POSInventorySystem.pdb
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\bin\Debug\POSInventorySystem.xml
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmMain.resources
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\POSInventorySystem.Resources.resources
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\POSInventorySystem.exe
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\POSInventorySystem.xml
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\POSInventorySystem.pdb
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmCategory.resources
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateCategory.resources
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmProduct.resources
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateProduct.resources
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateStaff.resources
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStaff.resources
+C:\Users\rOm2x\AppData\Local\Temporary Projects\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPOS.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.exe
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.xml
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.pdb
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.pdb
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.xml
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateCategory.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateProduct.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateStaff.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmCategory.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmMain.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPOS.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmProduct.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.Resources.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStaff.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmHome.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmDatabase.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLoadCategory.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStockIn.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPayment.resources
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.CodeAnalysisLog.xml
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.lastcodeanalysissucceeded
+E:\PROJECTS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPrintReceipt.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.exe
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.xml
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.pdb
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.pdb
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.xml
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.CodeAnalysisLog.xml
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.lastcodeanalysissucceeded
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateCategory.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateProduct.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateStaff.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmCategory.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmDatabase.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockIn.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmHome.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLoadCategory.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmMain.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPayment.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPOS.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPrintReceipt.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmProduct.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockIn.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStockIn.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.Resources.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStaff.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockOut.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockOut.resources
+E:\THESIS-PROJECTS\POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAbout.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.exe
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.xml
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.pdb
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.pdb
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.xml
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.CodeAnalysisLog.xml
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.lastcodeanalysissucceeded
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAbout.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateCategory.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateProduct.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateStaff.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmCategory.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmDatabase.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockIn.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockOut.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmHome.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLoadCategory.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLogin.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmMain.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPayment.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPOS.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPrintReceipt.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmProduct.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockIn.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockOut.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStockIn.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.Resources.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStaff.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.vbproj.GenerateResource.Cache
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterDailySales.resources
+E:\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportDailySales.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.exe
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.xml
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.pdb
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.pdb
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.xml
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.CodeAnalysisLog.xml
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.lastcodeanalysissucceeded
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAbout.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateCategory.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateProduct.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateStaff.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmCategory.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmDatabase.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterDailySales.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockIn.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockOut.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmHome.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLoadCategory.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLogin.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmMain.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPayment.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPOS.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPrintReceipt.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmProduct.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportDailySales.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockIn.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockOut.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStockIn.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.Resources.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStaff.resources
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\PROGRAMMING\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.exe
+E:\PROGRAMMING\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.xml
+E:\PROGRAMMING\THESIS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.pdb
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.exe
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.xml
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.pdb
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.pdb
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.xml
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.CodeAnalysisLog.xml
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.lastcodeanalysissucceeded
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAbout.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateCategory.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateProduct.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateStaff.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmCategory.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmDatabase.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterDailySales.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockIn.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockOut.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmHome.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLoadCategory.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLogin.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmMain.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPayment.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPOS.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPrintReceipt.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmProduct.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportDailySales.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockIn.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockOut.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStockIn.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.Resources.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStaff.resources
+E:\SYSTEM\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.vbproj.GenerateResource.Cache
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.exe
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.xml
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.pdb
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.pdb
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.xml
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.CodeAnalysisLog.xml
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.lastcodeanalysissucceeded
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAbout.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateCategory.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateProduct.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateStaff.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmCategory.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmDatabase.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterDailySales.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockIn.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockOut.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmHome.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLoadCategory.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLogin.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmMain.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPayment.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPOS.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPrintReceipt.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmProduct.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportDailySales.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockIn.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockOut.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStockIn.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.Resources.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStaff.resources
+E:\SYSTEM-PROJECTS\THESIS-PROJECTS\PINSOY-POS_INVENTORY\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.vbproj.GenerateResource.Cache
+E:\DECEMBER 2015 PROJECT\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.exe
+E:\DECEMBER 2015 PROJECT\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.xml
+E:\DECEMBER 2015 PROJECT\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.pdb
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.exe
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.xml
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.pdb
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.pdb
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.xml
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.CodeAnalysisLog.xml
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.lastcodeanalysissucceeded
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAbout.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateCategory.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateProduct.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateStaff.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmCategory.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmDatabase.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterDailySales.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockIn.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockOut.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmHome.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLoadCategory.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLogin.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmMain.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPayment.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPOS.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPrintReceipt.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmProduct.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportDailySales.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockIn.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockOut.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStockIn.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.Resources.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStaff.resources
+E:\DECEMBER 2015 PROJECT\BASHIM\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.vbproj.GenerateResource.Cache
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS_OLD\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.exe
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS_OLD\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.xml
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS_OLD\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.pdb
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.exe
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.xml
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.pdb
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.pdb
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.xml
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.CodeAnalysisLog.xml
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.lastcodeanalysissucceeded
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAbout.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateCategory.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateProduct.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateStaff.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmCategory.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmDatabase.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterDailySales.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockIn.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockOut.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmHome.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLoadCategory.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLogin.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmMain.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPayment.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPOS.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPrintReceipt.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmProduct.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportDailySales.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockIn.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockOut.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStockIn.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.Resources.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStaff.resources
+E:\PROJECT\2016 PROJECT\BASHIM\BACKUP\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.vbproj.GenerateResource.Cache
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.exe
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.xml
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.pdb
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.pdb
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.xml
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.CodeAnalysisLog.xml
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\bin\Debug\POSInventorySystem.exe.lastcodeanalysissucceeded
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAbout.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateCategory.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateProduct.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmAddUpdateStaff.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmCategory.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmDatabase.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterDailySales.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockIn.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmFilterStockOut.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmHome.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLoadCategory.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmLogin.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmMain.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmPrintReceipt.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmProduct.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportDailySales.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockIn.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmReportStockOut.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStockIn.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.Resources.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.frmStaff.resources
+C:\Users\user-pc\Desktop\POS\POSInventorySystem\POSInventorySystem\obj\x86\Debug\POSInventorySystem.vbproj.GenerateResource.Cache

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<item value=" with me " name=" WITH YOU "/>
+<item value=" with you " name=" WITH ME "/>
+<item value=" to me " name=" TO YOU "/>
+<item value=" to you " name=" TO ME "/>
+<item value=" of me " name=" OF YOU "/>
+<item value=" of you " name=" OF ME "/>
+<item value=" for me " name=" FOR YOU "/>
+<item value=" for you " name=" FOR ME "/>
+<item value=" give me " name=" GIVE YOU "/>
+<item value=" give you " name=" GIVE ME "/>
+<item value=" giving me " name=" GIVING YOU "/>
+<item value=" giving you " name=" GIVING ME "/>
+<item value=" gave me " name=" GAVE YOU "/>
+<item value=" gave you " name=" GAVE ME "/>
+<item value=" make me " name=" MAKE YOU "/>
+<item value=" make you " name=" MAKE ME "/>
+<item value=" made me " name=" MADE YOU "/>
+<item value=" made you " name=" MADE ME "/>
+<item value=" take me " name=" TAKE YOU "/>
+<item value=" take you " name=" TAKE ME "/>
+<item value=" save me " name=" SAVE YOU "/>
+<item value=" save you " name=" SAVE ME "/>
+<item value=" tell me " name=" TELL YOU "/>
+<item value=" tell you " name=" TELL ME "/>
+<item value=" telling me " name=" TELLING YOU "/>
+<item value=" telling you " name=" TELLING ME "/>
+<item value=" told me " name=" TOLD YOU "/>
+<item value=" told you " name=" TOLD ME "/>
+<item value=" am I " name=" ARE YOU "/>
+<item value=" are you " name=" AM I "/>
+<item value=" I am " name=" YOU ARE "/>
+<item value=" you are " name=" I AM "/>
+<item value=" me " name=" YOU "/>
+<item value=" you " name=" ME "/>
+<item value=" my " name=" YOUR "/>
+<item value=" your " name=" MY "/>
+<item value=" mine " name=" YOURS "/>
+<item value=" yours " name=" MINE "/>
+<item value=" myself " name=" YOURSELF "/>
+<item value=" yourself " name=" MYSELF "/>
+<item value=" you were " name=" I WAS "/>
+<item value=" I was " name=" YOU WERE "/>
+<item value=" you are " name=" I AM "/>
+<item value=" I am " name=" YOU ARE "/>
+<item value=" you " name=" I "/>
+<item value=" you " name=" ME "/>
+<item value=" your " name=" MY "/>
+<item value=" my " name=" YOUR "/>
+</root>

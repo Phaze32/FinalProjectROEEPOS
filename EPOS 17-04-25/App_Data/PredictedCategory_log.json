@@ -1,0 +1,22 @@
+[
+  "{\"DateTime\": \"21/05/2024 15:09:53\", \"UserMessage\": \"bye\", \"PredictedCategory\": \"Intention\", LabelPrediction\": \"unknown\", \"BotResponse\": \"Goodbye! Have a great day!\"\r\n}",
+  "{\"DateTime\": \"21/05/2024 16:29:18\", \"UserMessage\": \"hello\", \"PredictedCategory\": \"Intention\", LabelPrediction\": \"unknown\", \"BotResponse\": \"Hi there! How can I help you?\"\r\n}",
+  "{\"DateTime\": \"21/05/2024 16:31:29\", \"UserMessage\": \"shukriya\", \"PredictedCategory\": \"Intention\", LabelPrediction\": \"unknown\", \"BotResponse\": \"You are welcome\"\r\n}",
+  "{\"DateTime\": \"22/05/2024 16:22:16\", \"UserMessage\": \"hi\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"Hi there! How can I help you?\"\r\n}",
+  "{\"DateTime\": \"25/05/2024 19:34:35\", \"UserMessage\": \"hello\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"Hi there! How can I help you?\"\r\n}",
+  "{\"DateTime\": \"25/05/2024 19:37:48\", \"UserMessage\": \"i am sad\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"you are being rude\"\r\n}",
+  "{\"DateTime\": \"25/05/2024 19:37:58\", \"UserMessage\": \"i am sad\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"you are being rude\"\r\n}",
+  "{\"DateTime\": \"25/05/2024 19:38:12\", \"UserMessage\": \"i am sad\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"you are being rude\"\r\n}",
+  "{\"DateTime\": \"25/05/2024 19:39:38\", \"UserMessage\": \"i am sad\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"why? whats wrong?\"\r\n}",
+  "{\"DateTime\": \"25/05/2024 20:36:58\", \"UserMessage\": \"go to hell\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"you are being rude\"\r\n}",
+  "{\"DateTime\": \"25/05/2024 20:37:26\", \"UserMessage\": \"i am sad\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"why? whats wrong?\"\r\n}",
+  "{\"DateTime\": \"25/05/2024 20:41:01\", \"UserMessage\": \"do you sleep?\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"i am a loving bot!\"\r\n}",
+  "{\"DateTime\": \"25/05/2024 20:43:23\", \"UserMessage\": \"who are you?\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"i am a loving bot!\"\r\n}",
+  "{\"DateTime\": \"27/05/2024 20:58:43\", \"UserMessage\": \"hi\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"Hi there! How can I help you?\"\r\n}",
+  "{\"DateTime\": \"26/07/2024 18:23:48\", \"UserMessage\": \"hello\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"Hi there! How can I help you?\"\r\n}",
+  "{\"DateTime\": \"26/07/2024 18:24:09\", \"UserMessage\": \"what is your name?\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"i am a loving bot!\"\r\n}",
+  "{\"DateTime\": \"26/07/2024 18:24:31\", \"UserMessage\": \"what is your name?\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"i am a loving bot!\"\r\n}",
+  "{\"DateTime\": \"27/07/2024 21:56:59\", \"UserMessage\": \"hi\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"Hi there! How can I help you?\"\r\n}",
+  "{\"DateTime\": \"27/07/2024 21:57:34\", \"UserMessage\": \"hello\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"Hi there! How can I help you?\"\r\n}",
+  "{\"DateTime\": \"27/07/2024 21:59:17\", \"UserMessage\": \"goodbye\", \"PredictedCategory\": \"Intention\", \"LabelPrediction\": \"unknown\", \"BotResponse\": \"Goodbye! Have a great day!\"\r\n}"
+]

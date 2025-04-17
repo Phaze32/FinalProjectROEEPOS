@@ -1,0 +1,86 @@
+﻿<script type="text/javascript">
+    function myFunc(f) {
+        // f = "ddd";
+        // alert("Test ok!" + "PLUid=" + f);
+        get_product(f);
+    };
+    function get_customer() {
+        alert('hhh##FormCustomerModal');
+        alert('ln9.FormCustomerModal.html.get_customer.ln:9 pos/AddEditCustomer.aspx?' + 'cname=' + cname.value + '&sname=' + sname.value + '&cemail=' + cemail.value + '&cphone=' + cphone.value + '&cf1=' + cf1.value + '&cf2=' + cf2.value + '&cpostcode=' + cpostcode.value + 'zzz');
+        // alert('FormCustomerModal.html.get_customer.ln:9 /pos/add_customer.aspx' + 'cname=' + cname.value + '&sname=' + sname.value + '&cemail=' + cemail.value + '&cphone=' + cphone.value + '&cf1=' + cf1.value + '&cf2=' + cf2.value + '&cpostcode=' + cpostcode.value  );
+        // Retrieve TicketID from query string
+        var urlParams = new URLSearchParams(window.location.search);
+        var ticketID = urlParams.get('TicketID');
+
+        var mdata = 'Forename=' + cname.value + '&Surname=' + sname.value + '&EMail=' + cemail.value + '&Telephone=' + cphone.value + '&AddressStreet=' + cf1.value + '&AddressTown=' + cf2.value + '&Postcode=' + cpostcode.value + '&TicketID=' + ticketID;
+
+        alert('ln12.get_customer##mdata='+ mdata + '##')
+        $.ajax({
+            type: "get",
+            url: "/pos/addeditcustomer.aspx?",
+            data: "act=addcustomer&" + mdata,
+            success: function (msg) {
+                // alert('get_product.ln:22 msg=' + msg);
+                $("#result").html(msg);
+
+                //setTimeout(function(){$.unblockUI}, 50 );
+                // $.unblockUI();
+            }
+        });
+        get_Totals("66");
+    };
+</script>
+<!-- *************************************************************************** -->
+<!-- form is triggered through ajax function in file scripts\posmain.js line 164 -->
+<!-- *************************************************************************** -->
+<div class="modal" data-easein="flipYIn" id="proModal" tabindex="-1" role="dialog" aria-labelledby="proModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title" id="proModalLabel">
+                    Payment
+                </h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th style="width:25%;">Net Price</th>
+                        <th style="width:25%;"><span id="net_price"></span></th>
+                        <th style="width:25%;">Product Tax</th>
+                        <th style="width:25%;"><span id="pro_tax"></span> <span id="pro_tax_method"></span></th>
+                    </tr>
+                </table>
+                <input type="hidden" id="row_id" />
+                <input type="hidden" id="item_id" />
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="nPrice">Unit Price</label> <input type="text" class="form-control input-sm kb-pad" id="nPrice" onClick="this.select();" placeholder="New Price">
+                        </div>
+                        <div class="form-group">
+                            <label for="nDiscount">Discount</label> <input type="text" class="form-control input-sm kb-pad" id="nDiscount" onClick="this.select();" placeholder="Discount">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="nQuantity">Quantity</label> <input type="text" class="form-control input-sm kb-pad" id="nQuantity" onClick="this.select();" placeholder="Current Quantity">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="nComment">Comment</label> <textarea class="form-control kb-text" id="nComment"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button class="btn btn-success" id="editItem">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+

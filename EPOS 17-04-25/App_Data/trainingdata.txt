@@ -1,0 +1,22 @@
+[
+  {
+    "query": "Hello",
+    "intent": "Greeting",
+    "response": "Hi there! How can I help you today?"
+  },
+  {
+    "query": "What is the weather like?",
+    "intent": "Weather",
+    "response": "Unfortunately, I don't have access to weather information yet. But I can tell you a joke!"
+  },
+  {
+    "query": "Tell me a joke",
+    "intent": "Joke",
+    "response": "Why did the scarecrow win an award? Because he was outstanding in his field!"
+  },
+  {
+    "query": "Goodbye",
+    "intent": "Farewell",
+    "response": "See you later! Have a great day!"
+  }
+]

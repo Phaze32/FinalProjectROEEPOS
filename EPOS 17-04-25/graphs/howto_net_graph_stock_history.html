@@ -1,0 +1,283 @@
+﻿<HTML>
+<META http-equiv="PICS-Label" content='(PICS-1.1 "http://www.rsac.org/ratingsv01.html" l gen true comment "RSACi North America Server" by "RodStephens@vb-helper.com" for "http://www.vb-helper.com" on "1998.03.17T18:18-0800" r (n 0 s 0 v 0 l 0))'>
+<HEAD>
+<TITLE>VB Helper: HowTo: Graph historical stock prices in Visual Basic .NET</TITLE>
+<META NAME="Author" CONTENT="Rod Stephens">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META HTTP-EQUIV="Keywords" CONTENT="graphics, stocks, stock prices, graph, example, example program, Windows Forms programming, VB.NET, Visual Basic .NET">
+<META NAME="Keywords" CONTENT="graphics, stocks, stock prices, graph, example, example program, Windows Forms programming, VB.NET, Visual Basic .NET">
+<META NAME="Description" CONTENT="VB Helper: HowTo: Graph historical stock prices in Visual Basic .NET">
+<META NAME="Copyright" CONTENT="Copyright &copy; 1997-2010 Rocky Mountain Computer Consulting, Inc.">
+<META NAME="Rating" CONTENT="General">
+<META NAME="Robots" CONTENT="All">
+<LINK REL="icon" HREF="http://www.vb-helper.com/vbhelper_icon.ico">
+</HEAD>
+
+<BODY BGCOLOR="#E1F3FF" BACKGROUND="bg_blue.jpg">
+
+  <!-- This table contains the banner, menu column, and content. -->
+  <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+    <!-- ****** -->
+    <!-- Banner -->
+    <!-- ****** -->
+    <TR><TD>
+      <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0" ALIGN="Left">
+        <TR>
+          <TD BACKGROUND="banner_mid.jpg"><IMG SRC="banner_l.jpg" WIDTH="410" HEIGHT="64"></TD>
+          <TD BGCOLOR="#E1F3FF"><IMG SRC="banner_r.jpg" WIDTH="32" HEIGHT="64"></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+    <TR><TD>&nbsp;</TD></TR>
+
+    <!-- Menu column and content -->
+    <TR><TD>
+      <TABLE WIDTH="100%" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+        <!-- *********** -->
+        <!-- Menu column -->
+        <!-- *********** -->
+        <TR>
+          <TD ALIGN="Left" VALIGN="Top">
+            <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0">
+              <!-- Menu top -->
+              <TR>
+                <TD><IMG SRC="blue_ul.jpg" WIDTH="16" HEIGHT="16"></TD>
+                <TD><IMG SRC="blue_um.jpg" WIDTH="93" HEIGHT="16"></TD>
+                <TD><IMG SRC="blue_ur.jpg" WIDTH="16" HEIGHT="16"></TD>
+              </TR>
+
+              <!-- Menu entries -->
+              <TR BGCOLOR="#7FCFFF">
+                <TD BACKGROUND="blue_l.jpg" WIDTH="16">&nbsp;</TD>
+                <TD><CENTER>
+                  <A HREF="index.html"><B><FONT SIZE="+1">Home</FONT></B></A><BR>
+                  <A HREF="search.html"><B>Search</B></A><BR>
+                  &nbsp;<BR>
+                  <A HREF="whats_new.html"><B>What's New</B></A><BR>
+                  <A HREF="index_categories.html"><B>Index</B></A><BR>
+                  <A HREF="books.html"><B>Books</B></A><BR>
+                  <A HREF="links.html"><B>Links</B></A><BR>
+                  <A HREF="http://www.topica.com/lists/VBHelperQA/read"><B>Q &amp; A</B></A><BR>
+                  <A HREF="newsletter.html"><B>Newsletter</B></A><BR>
+                  <A HREF="banners.html"><B>Banners</B></A><BR>
+                  &nbsp;<BR>
+                  <!-- Bookstore -->
+                  <A HREF="mailto:feedback@vb-helper.com"><B>Feedback</B></A><BR>
+                  <A HREF="tip_jar.html"><B>Tip Jar</B></A><BR>
+                  &nbsp;<BR>
+                  <table border="0" bgcolor="#FFFF80" cellpadding="3">
+                    <tr><td>
+                      <A HREF="http://www.csharphelper.com/"><B>C# Helper...</B></A><BR>
+                    </td></tr>
+                  </table>
+                  &nbsp;<BR>
+                  <A HREF="feed.xml"><IMG SRC="xml_rss.jpg" BORDER="0" ALT="XML RSS Feed"></A><BR>
+                  <a href="http://www.twitter.com/VBHelper"><img src="http://twitter-badges.s3.amazonaws.com/twitter-a.png" alt="Follow VBHelper on Twitter" vspace="10"/></a>
+                  <a href="http://www.twitter.com/VBHelper"><img src="http://twitter-badges.s3.amazonaws.com/twitter-a.png" alt="Follow VBHelper on Twitter" vspace="10"/></a>
+                </CENTER></TD>
+                <TD BACKGROUND="blue_r.jpg" WIDTH="16">&nbsp;</TD>
+              </TR>
+
+              <!-- Menu bottom -->
+              <TR>
+                <TD><IMG SRC="blue_ll.jpg" WIDTH="16" HEIGHT="16"></TD>
+                <TD><IMG SRC="blue_lm.jpg" WIDTH="93" HEIGHT="16"></TD>
+                <TD><IMG SRC="blue_lr.jpg" WIDTH="16" HEIGHT="16"></TD>
+              </TR>
+
+              <TR><TD HEIGHT="50" COLSPAN="3">&nbsp;</TR></TD>
+
+              <!-- ******** -->
+              <!-- Partners -->
+              <!-- ******** -->
+
+              <!-- MVP -->
+              <TR><TD COLSPAN="3"><A HREF="http://www.mvps.org"><IMG SRC="mvp_logo.gif" BORDER="0"></A></TR></TD>
+              <TR><TD HEIGHT="20" COLSPAN="3">&nbsp;</TR></TD>
+
+              <!-- MSDN VB Community -->
+              <TR><TD COLSPAN="3" ALIGN="Center">
+<A HREF="http://msdn.microsoft.com/vbasic/community/default.aspx">MSDN Visual Basic Community</A>
+              </TD></TR>
+              <TR><TD HEIGHT="50" COLSPAN="3">&nbsp;</TR></TD>
+
+              <!-- ********** -->
+              <!-- Recommends -->
+              <!-- ********** -->
+
+              <!-- Wiley -->
+              <TR><TD COLSPAN="3" ALIGN="Center" BACKGROUND="sandpaper.gif"><A HREF="http://service.bfast.com/bfast/click?bfmid=37920629&siteid=40078832&bfpage=computer_science" TARGET="_top"><IMG SRC="wiley_logo.gif" BORDER="0" ALIGN="Center" WIDTH="77" HEIGHT="105"></TD></TR>
+              <TR><TD HEIGHT="10" COLSPAN="3">&nbsp;</TR></TD>
+
+              <!-- Que -->
+              <TR><TD COLSPAN="3" ALIGN="Center"><A HREF="http://www.quepublishing.com"><IMG SRC="que.gif" BORDER="0" ALIGN="Center" WIDTH="121" HEIGHT="36"></A></TD></TR>
+              <TR><TD HEIGHT="10" COLSPAN="3">&nbsp;</TR></TD>
+
+              <!-- Left logo link -->
+              <TR><TD HEIGHT="10" COLSPAN="3">&nbsp;</TR></TD>
+
+              <!-- ********** -->
+              <!-- More stuff -->
+              <!-- ********** -->
+
+            </TABLE>
+          </TD>
+
+          <!-- A little space between the menus and content -->
+          <TD WIDTH="5">&nbsp;</TD>
+
+          <!-- ******* -->
+          <!-- Content -->
+          <!-- ******* -->
+<!-- Top add -->
+
+          <TD WIDTH="100%" ALIGN="Left" VALIGN="Top">
+            <TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+              <!-- How To Summary -->
+              <TR><TD>
+                <TABLE WIDTH="100%" BORDER="2" CELLSPACING="0" CELLPADDING="2">
+                  <TR><TH ALIGN="Left">Title</TH><TD WIDTH="100%">Graph historical stock prices in Visual Basic .NET</TD></TR>
+                  <TR><TH ALIGN="Left">Description</TH><TD WIDTH="100%">This example shows how to graph historical stock prices in Visual Basic .NET.</TD></TR>
+                  <TR><TH ALIGN="Left">Keywords</TH><TD>graphics, stocks, stock prices, graph, example, example program, Windows Forms programming, VB.NET, Visual Basic .NET</TD></TR>
+                  <TR><TH ALIGN="Left">Categories</TH><TD>Algorithms</TD></TR>
+                </TABLE>
+              </TD></TR>
+
+              <!-- Text content -->
+              <TR><TD>&nbsp;<BR></TD></TR>
+              <TR><TD>
+<img src="howto_net_graph_stock_history.png" align="right" hspace="5">
+<P>
+The key to this example is the GetStockPrices method shown in the following code.
+              </TD></TR>
+
+              <!-- Code content -->
+              <TR><TD>&nbsp;<BR></TD></TR>
+              <TR>
+                <TD BACKGROUND="computer_paper.jpg">
+                  <PRE><FONT NAME="Courier New" POINT-SIZE="10" SIZE="2"><FONT COLOR="#008000">' Get the prices for this symbol.</FONT>
+Private Function GetStockPrices(ByVal symbol As String) As _
+    List(Of Single)
+    <FONT COLOR="#008000">' Compose the URL.</FONT>
+    Dim url As String = _
+        "http://www.google.com/finance/historical?output=csv&amp;q=" _
+        &amp; symbol
+
+    <FONT COLOR="#008000">' Get the result.</FONT>
+    <FONT COLOR="#008000">' Get the web response.</FONT>
+    Dim result As String = GetWebResponse(url)
+
+    <FONT COLOR="#008000">' Get the historical prices.</FONT>
+    Dim lines() As String = result.Split( _
+        New String() {vbCr, vbLf}, _
+        StringSplitOptions.RemoveEmptyEntries)
+    Dim prices As New List(Of Single)()
+
+    <FONT COLOR="#008000">' Process the lines, skipping the header.</FONT>
+    For i As Integer = 1 To lines.Length - 1
+        Dim line As String = lines(i)
+        prices.Add(Single.Parse(line.Split(","c)(4)))
+    Next i
+
+    Return prices
+End Function</FONT></PRE>
+              </TD></TR>
+
+              <!-- Text content -->
+              <TR><TD>&nbsp;<BR></TD></TR>
+              <TR><TD>
+<p>
+This method composes a URL of the form http://www.google.com/finance/historical?output=csv&q=DIS where DIS is a stock ticker symbol. The Google website returns historical stock data for that symbol in the form of a CSV (comma-separated value) file. The program breaks it into lines and saves the prices in a List of float that it returns to the calling code.
+<p>
+For additional information about how the program works, including how it draws the graph and how the GetWebResponse method works, download the example and look at the code.
+              </TD></TR>
+
+
+              <TR><TD><FONT SIZE="-2">&nbsp;</FONT></TD></TR>
+<TR><TD ALIGN="Center">
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_32x32_style addthis_default_style">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4cb625876572a8be"></script>
+<!-- AddThis Button END -->
+</TD></TR>
+              <TR><TD><FONT SIZE="-2">&nbsp;</FONT></TD></TR>
+
+              <!-- *************** -->
+              <!-- Download button -->
+              <!-- *************** -->
+
+              <TR><TD><FONT SIZE="-2">&nbsp;</FONT></TD></TR>
+              <TR><TD ALIGN="Center"><A HREF="HowTo/howto_net_graph_stock_history.zip"><IMG SRC="download.jpg" BORDER="0"></A></TD></TR>
+              <TR><TD><FONT SIZE="-2">&nbsp;</FONT></TD></TR>
+
+            </TABLE> <!-- End content table -->
+          </TD> <!-- End content column -->
+
+          <!-- ************** -->
+          <!-- Google AdSense -->
+          <!-- ************** -->
+          <TD WIDTH="120" ALIGN="Right" VALIGN="Top">
+            <TABLE WIDTH="165" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+              <TR><TD ALIGN="Right">
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-6627515316741006";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_channel ="4974732445";
+google_color_border = "00CC66";
+google_color_bg = "99FF99";
+google_color_link = "0000FF";
+google_color_url = "0033FF";
+google_color_text = "000000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+              </TD></TR>
+            </TABLE> <!-- End Google AdSense table -->
+          </TD> <!-- End Google AdSense column -->
+
+
+        </TR> <!-- End row containing menu column and content -->
+      </TABLE> <!-- End table containing menu column and content -->
+    </TD></TR>
+
+    <!-- ****** -->
+    <!-- Footer -->
+    <!-- ****** -->
+    <TR><TD WIDTH="100%">
+      <TABLE WIDTH="100%" BORDER="0" BGCOLOR="#87CEFA" CELLSPACING="0" CELLPADDING="0">
+        <!-- Top row -->
+        <TR>
+          <TD BGCOLOR="#E1F3FF" ALIGN="Right" WIDTH="16"><IMG SRC="blue_ul.jpg" WIDTH="16" HEIGHT="16"></TD>
+          <TD BACKGROUND="blue_um.jpg" COLSPAN="2" ALIGN="Center"><FONT SIZE="-2">
+            Copyright &copy; 1997-2010 Rocky Mountain Computer Consulting, Inc. &nbsp; All rights reserved.
+          </FONT></TD>
+          <TD BGCOLOR="#E1F3FF"><IMG SRC="blue_ur.jpg" WIDTH="16" HEIGHT="16"></TD>
+        </TR>
+
+        <!-- Bottom row -->
+        <TR>
+          <TD BGCOLOR="#E1F3FF" ALIGN="Right" WIDTH="16"><IMG SRC="blue_ll.jpg" WIDTH="16" HEIGHT="16"></TD>
+          <TD BACKGROUND="blue_lm.jpg"><FONT SIZE="-2">
+            &nbsp;<SCRIPT LANGUAGE=JavaScript>document.write(document.URL)</SCRIPT></FONT></TD>
+          <TD BACKGROUND="blue_lm.jpg" ALIGN="Right"><FONT SIZE="-2">
+            Updated <SCRIPT LANGUAGE=JavaScript>document.write(document.lastModified)</SCRIPT> &nbsp;
+          </FONT></TD>
+          <TD BGCOLOR="#E1F3FF"><IMG SRC="blue_lr.jpg" WIDTH="16" HEIGHT="16"></TD>
+        </TR>
+      </TABLE>
+    </TD></TR>
+  </TABLE> <!-- End table containing banner, menu column + content, and footer -->
+
+</BODY>
+</HTML>
