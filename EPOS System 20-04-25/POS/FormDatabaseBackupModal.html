@@ -1,0 +1,77 @@
+﻿<!-- Modal -->
+<div class="modal fade" id="backupModal" tabindex="-1" role="dialog" aria-labelledby="backupModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="backupModalLabel">Database Backup</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Result Band -->
+                <div id="resultBand" class="alert" style="display: none;"></div>
+
+                <!-- Backup Progress -->
+                <p id="backupProgress">Initiating backup... Please wait.</p>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        // Trigger Modal
+        $('#backupButton').on('click', function () {
+            // Show the modal
+            $('#backupModal').modal('show');
+
+            // Reset result band and progress message
+            $('#resultBand').hide().removeClass('alert-success alert-danger');
+            $('#backupProgress').show().text('Initiating backup... Please wait.');
+
+            // Make AJAX call to the handler
+            $.ajax({
+                url: '/Handlers/SQLDBBackupHandler.ashx', // Handler URL
+                method: 'GET',
+                success: function (response) {
+                    if (typeof response === 'string') {
+                        response = JSON.parse(response);
+                    }
+
+                    // Update Result Band Based on Response
+                    if (response.success) {
+                        $('#resultBand')
+                            .addClass('alert-success')
+                            .text(response.message + ' File: ' + response.fileName)
+                            .show();
+                    } else {
+                        $('#resultBand')
+                            .addClass('alert-danger')
+                            .text(response.message)
+                            .show();
+                    }
+
+                    // Hide progress message
+                    $('#backupProgress').hide();
+                },
+                error: function (xhr, status, error) {
+                    $('#resultBand')
+                        .addClass('alert-danger')
+                        .text('An error occurred while initiating the backup: ' + error)
+                        .show();
+
+                    $('#backupProgress').hide();
+                }
+            });
+        });
+    });
+
+</script>

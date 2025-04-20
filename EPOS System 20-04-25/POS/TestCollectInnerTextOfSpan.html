@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Read Inner HTML</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            function updateCount() {
+                var count = $("#count").html();
+                console.log("Current count: " + count);
+                return count; // Return the current count
+            }
+
+            // Call updateCount when the document is ready
+            var currentCount = updateCount();
+
+            // Set up a MutationObserver to detect changes to the inner text of the span
+            var target = document.getElementById('count');
+            var observer = new MutationObserver(function (mutations) {
+                mutations.forEach(function (mutation) {
+                    currentCount = updateCount();
+                });
+            });
+
+            var config = { childList: true, characterData: true, subtree: true };
+            observer.observe(target, config);
+
+            // Display the count as an alert when the button is clicked
+            $("#showCountButton").click(function () {
+                alert("Current count: " + currentCount);
+            });
+        });
+    </script>
+</head>
+<body>
+    <span id="count">88</span>
+    <button id="showCountButton">Show Count</button>
+</body>
+</html>

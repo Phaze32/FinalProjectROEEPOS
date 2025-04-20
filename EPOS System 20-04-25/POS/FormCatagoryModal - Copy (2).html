@@ -1,0 +1,141 @@
+﻿<!-- *************************************************************************** -->
+<!--form is triggered through ajax function in file scripts\posmain.js line 164 -- >
+<!-- *************************************************************************** -->
+<style>
+    /* Style for the modal backdrop */
+    .modal-backdrop {
+        background-color: rgba(0, 0, 0, 0.1); /* Black with 50% transparency */
+    }
+
+    /* Style for the modal itself */
+    .modal {
+        background: rgba(255, 255, 255, 0.1); /* White with 80% transparency */
+        backdrop-filter: blur(5px); /* Adds a subtle blur effect */
+        border-radius: 10px; /* Rounded corners for a polished look */
+    }
+
+    /* Optional: Style for the modal content */
+    .modal-content {
+        border: 2px solid #ccc; /* Adds a border to the content */
+        padding: 20px; /* Space inside the modal content */
+    }
+
+    /* Optional: Style for close button inside the modal */
+    .modal-header .btn-close {
+        color: #000;
+    }
+
+    @keyframes flipYIn {
+        0% {
+            transform: perspective(1000px) rotateY(90deg); /* Start flipped */
+            opacity: 0; /* Hidden */
+        }
+
+        100% {
+            transform: perspective(1000px) rotateY(0); /* End in normal view */
+            opacity: 1; /* Fully visible */
+        }
+    }
+
+    /* Apply the animation to the modal */
+    .modal.flipYIn {
+        animation: flipYIn 0.3s ease-in-out; /* Animation duration and easing */
+        transform-origin: center; /* Set the transformation origin */
+    }
+</style>
+<div class="modal" data-easein="flipYIn" id="catagoryModal" tabindex="-1" role="dialog" aria-labelledby="cModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title" id="editModalLabel">Edit User</h4>
+            </div>
+            <form id="editForm" method="post">
+                <div class="modal-body">
+                    <input type="hidden" id="Rec_id" name="Rec_id" />
+                    <div class="form-group">
+                        <label for="Department">Department</label>
+                        <input type="text" id="Department" name="Department" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="DeparmentName">Sur Name</label>
+                        <input type="text" id="DeparmentName" name="DeparmentName" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="ShopID">ShopID</label>
+                        <input type="text" id="ShopID" name="Address" class="form-control" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" id="getdata" onclick="">Get User Data</button>
+
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<style>
+    @keyframes flipYIn {
+        0% {
+            transform: perspective(1000px) rotateY(90deg); /* Start flipped */
+            opacity: 0; /* Hidden */
+        }
+
+        100% {
+            transform: perspective(1000px) rotateY(0); /* End in normal view */
+            opacity: 1; /* Fully visible */
+        }
+    }
+
+    /* Apply the animation (with a slow flip) to the modal */
+    .modal.flipYIn {
+        animation: flipYIn 3s ease-in-out; /* Increased duration to 3s makes it slow */
+        transform-origin: center;
+    }
+</style>
+
+<script type="text/javascript">
+    
+
+    // Fetch user data and populate form
+    function fetchData(Rec_id) {
+        alert("fetchData.Rec_id=" + Rec_id);
+        console.log("fetchData.Rec_id=:", Rec_id);
+        $.ajax({
+            url: '/Handlers/categoryHandler.ashx', // Ensure this URL is correct
+            type: 'GET',
+            dataType: 'json',
+            data: { Rec_id: Rec_id.trim() }, // Trim any leading or trailing spaces
+            success: function (data) {
+                console.log("AJAX Response:", data);
+
+                // Check if data is a valid array
+                if (data && Array.isArray(data)) {
+                    // Find the specific category matching Rec_id
+                    const modalData = data.find(Catagory => String(Catagory.Rec_id) === String(Rec_id));
+
+                    if (modalData) {
+                        // Populate modal fields with returned data
+                        $('#Rec_id').val(modalData.Rec_id);
+                        $('#Department').val(modalData.Department);
+                        $('#DeparmentName').val(modalData.DeparmentName);
+                        $('#ShopID').val(modalData.ShopID || 'N/A'); // Default to 'N/A' if null
+                    } else {
+                        alert('No data found for this category.');
+                    }
+                } else {
+                    alert('Unexpected data format or no response!');
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                console.error('Status:', status);
+                console.error('Response:', xhr.responseText);
+                alert('Error fetching data from the server!');
+            }
+        });
+    }
+
+</script>

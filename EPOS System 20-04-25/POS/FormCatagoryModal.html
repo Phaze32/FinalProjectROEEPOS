@@ -1,0 +1,187 @@
+﻿<!-- *************************************************************************** -->
+<!--form is triggered through ajax function in file scripts\posmain.js line 164 -- >
+<!-- *************************************************************************** -->
+<style>
+    /* Style for the modal backdrop */
+    .modal-backdrop {
+        background-color: rgba(0, 0, 0, 0.1); /* Black with 50% transparency */
+    }
+
+    /* Style for the modal itself */
+    .modal {
+        background: rgba(255, 255, 255, 0.1); /* White with 80% transparency */
+        backdrop-filter: blur(5px); /* Adds a subtle blur effect */
+        border-radius: 10px; /* Rounded corners for a polished look */
+    }
+
+    /* Optional: Style for the modal content */
+    .modal-content {
+        border: 2px solid #ccc; /* Adds a border to the content */
+        padding: 20px; /* Space inside the modal content */
+    }
+
+    /* Optional: Style for close button inside the modal */
+    .modal-header .btn-close {
+        color: #000;
+    }
+
+    @keyframes flipYIn {
+        0% {
+            transform: perspective(1000px) rotateY(90deg); /* Start flipped */
+            opacity: 0; /* Hidden */
+        }
+
+        100% {
+            transform: perspective(1000px) rotateY(0); /* End in normal view */
+            opacity: 1; /* Fully visible */
+        }
+    }
+
+    /* Apply the animation to the modal */
+    .modal.flipYIn {
+        animation: flipYIn 0.3s ease-in-out; /* Animation duration and easing */
+        transform-origin: center; /* Set the transformation origin */
+    }
+</style>
+<div class="modal" data-easein="flipYIn" id="catagoryModal" tabindex="-1" role="dialog" aria-labelledby="cModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title" id="editModalLabel">Edit Category</h4>
+            </div>
+            <form id="editForm" method="post">
+                <div class="modal-body">
+                    <input type="hidden" id="Rec_id" name="Rec_id" />
+                    <div class="form-group">
+                        <label for="Department">Department</label>
+                        <input type="text" id="Department" name="Department" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="DeparmentName">Department Name</label>
+                        <input type="text" id="DeparmentName" name="DeparmentName" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="ShopID">ShopID</label>
+                        <input type="text" id="ShopID" name="Address" class="form-control" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" onclick="updateCategory()" id="SaveData" class="btn btn-primary">Save Changes</button>
+                    <div id="system-message" place-holder="Edit and Click Save Changes"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<style>
+    @keyframes flipYIn {
+        0% {
+            transform: perspective(1000px) rotateY(90deg); /* Start flipped */
+            opacity: 0; /* Hidden */
+        }
+
+        100% {
+            transform: perspective(1000px) rotateY(0); /* End in normal view */
+            opacity: 1; /* Fully visible */
+        }
+    }
+
+    /* Apply the animation (with a slow flip) to the modal */
+    .modal.flipYIn {
+        animation: flipYIn 3s ease-in-out; /* Increased duration to 3s makes it slow */
+        transform-origin: center;
+    }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        alert("Page Loaded. Ready to Fetch Data!");
+        const defaultUserID = 8; // Default userID
+        defaultUserID = modalData.Rec_id
+        fetchData(defaultUserID); // Trigger the AJAX call
+        $('#getdata').click(function () {
+            fetchData(defaultUserID); // Trigger the AJAX call
+        });
+    });
+
+
+    // Fetch user data and populate form
+    function fetchData(Rec_id) {
+        alert("fetchData.Rec_id=" + Rec_id);
+        console.log("fetchData.Rec_id=:", Rec_id);
+        $.ajax({
+            url: '/Handlers/categoryHandler.ashx', // Ensure this URL is correct
+            type: 'GET',
+            dataType: 'json',
+            data: { Rec_id: Rec_id.trim() }, // Trim any leading or trailing spaces
+            success: function (data) {
+                console.log("AJAX Response:", data);
+
+                // Check if data is a valid array
+                if (data && Array.isArray(data)) {
+                    // Find the specific category matching Rec_id
+                    const modalData = data.find(Catagory => String(Catagory.Rec_id) === String(Rec_id));
+
+                    if (modalData) {
+                        // Populate modal fields with returned data
+                        $('#Rec_id').val(modalData.Rec_id);
+                        $('#Department').val(modalData.Department);
+                        $('#DeparmentName').val(modalData.DeparmentName);
+                        $('#ShopID').val(modalData.ShopID || 'N/A'); // Default to 'N/A' if null
+                    } else {
+                        alert('No data found for this category.');
+                    }
+                } else {
+                    alert('Unexpected data format or no response!');
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                console.error('Status:', status);
+                console.error('Response:', xhr.responseText);
+                alert('Error fetching data from the server!');
+            }
+        });
+    }
+    // for saving edited records
+
+    function updateCategory() {
+        console.log('Starting updateCategory function...'); // Log function start
+        alert("FormCatagoryModal.html.Starting updateCategory function...");
+        // Gather form data
+        const formData = {
+            action: "update", // Specify the update action
+            Rec_id: $('#Rec_id').val().trim(),
+            Department: $('#Department').val().trim(),
+            DeparmentName: $('#DeparmentName').val().trim(),
+            ShopID: $('#ShopID').val().trim()
+        };
+        console.log('Form Data:', formData); // Log the gathered form data
+
+        // Send the JSON request
+        $.ajax({
+            url: '/Handlers/CategorySaveHandler.ashx',
+            type: 'GET',
+            dataType: 'json',
+            data: {
+                action: "update",
+                Rec_id: $('#Rec_id').val().trim(),
+                Department: $('#Department').val().trim(),
+                DeparmentName: $('#DeparmentName').val().trim(),
+                ShopID: $('#ShopID').val().trim()
+            },
+            success: function (response) {
+                // ... same as before
+            },
+            error: function (xhr, status, error) {
+                // ... same as before
+            }
+        });
+
+
+        console.log('AJAX request sent. Waiting for server response...'); // Log that request was sent
+    };
+</script>
+
