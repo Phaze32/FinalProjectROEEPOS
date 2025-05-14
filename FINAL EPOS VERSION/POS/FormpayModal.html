@@ -1,0 +1,284 @@
+﻿<script>
+    function updateRecord() {
+        // Log and alert for debugging at function start
+        console.log("updateRecord function started");
+        alert("updateRecord function started");
+
+        // Retrieve values from the modal's input elements
+        var note = $("#note").val();
+        console.log("Note value: " + note);
+
+        var amount = $("#amount").val();
+        console.log("Amount value: " + amount);
+        alert("Amount: " + amount);
+
+        var paidBy = $("#paid_by").val();
+        console.log("Paid_by value: " + paidBy);
+        alert("Paid_by: " + paidBy);
+
+        var paymentNote = $("#payment_note").val();
+        console.log("Payment_note value: " + paymentNote);
+        alert("Payment Note: " + paymentNote);
+
+        // Optional fields: gift card and cheque details
+        var giftCardNo = $("#gift_card_no").val();
+        console.log("Gift Card No: " + giftCardNo);
+        alert("Gift Card No: " + giftCardNo);
+
+        var chequeNo = $("#cheque_no").val();
+        console.log("Cheque No: " + chequeNo);
+        alert("Cheque No: " + chequeNo);
+
+        // Retrieve summary values displayed in the modal
+        var itemCount = $("#item_count").text().trim();
+        console.log("Item Count: " + itemCount);
+
+        var totalPayable = $("#twt").text().trim();
+        console.log("Total Payable: " + totalPayable);
+
+        var totalPaying = $("#total_paying").text().trim();
+        console.log("Total Paying: " + totalPaying);
+
+        var balance = $("#balance").text().trim();
+        console.log("Balance: " + balance);
+        alert("Balance: " + balance);
+
+        // Use hard-coded values for demonstration (replace these with your function calls as needed)
+        var mTicketid = 37460; // Example TicketID
+        alert("mTicketid: " + mTicketid);
+        var mCustomerID = getCustomerID();//  10653; // Example CustomerID
+        alert("CustomerID: " + mCustomerID);
+        var mCustomerAccNo =  2063; // Example CustomerAccountNo
+        alert("mCustomerAccNo: " + mCustomerAccNo);
+
+        // Alert concatenated data using the correct variable names
+        alert("Ticketid: " + mTicketid + " Note: " + note + " Amount: " + amount + " Paid_by: " + paidBy +
+            " Payment Note: " + paymentNote + " Gift Card No: " + giftCardNo + " Cheque No: " + chequeNo);
+
+        // Build the data object with collected values
+        var dataObj = {
+            Action: "add",
+            note: note,
+            amount: amount,
+            paidby: paidBy,
+            paymentNote: paymentNote,
+            gift_card_no: giftCardNo,
+            cheque_no: chequeNo,
+            item_count: itemCount,
+            total_payable: totalPayable,
+            total_paying: totalPaying,
+            balance: balance,
+            TicketID: mTicketid,
+            CustomerID: mCustomerID,
+            CustomerAccNo: mCustomerAccNo
+        };
+
+        console.log("Data object prepared:", dataObj);
+        alert("Data prepared for submission: " + JSON.stringify(dataObj));
+
+        // Make the AJAX call to the server
+        $.ajax({
+            type: "GET", // Use POST for sensitive data and bulk submission if needed
+            url: "/Handlers/PaymentsHandler.ashx", // Replace with your actual handler URL if necessary
+            data: dataObj,
+            success: function (response) {
+                console.log("AJAX success - Server response:", response);
+                // Write the success message in a green band in #popupContentReturn
+                //$("#popupContentReturn").html("<div style='background-color: green; color: white; padding: 10px; margin: 10px 0;'>Payment processed successfully: " + response + "</div>");
+                // Disable the submit button and all form controls within the modal
+                //$("#submit-sale").prop("disabled", true);
+                //$("#payModal input, #payModal textarea, #payModal select").prop("disabled", true);
+                alert("AJAX Success: " + response);
+            },
+            error: function (xhr, status, error) {
+                console.error("AJAX error - Status:", status, "Error:", error);
+                // Write the error message in a red band in #popupContentReturn
+                $("#popupContentReturn").html("<div style='background-color: red; color: white; padding: 10px; margin: 10px 0;'>Error processing payment: " + error + "</div>");
+                // Disable the submit button and all form controls within the modal
+                $("#submit-sale").prop("disabled", true);
+                $("#payModal input, #payModal textarea, #payModal select").prop("disabled", true);
+                alert("AJAX Error: " + error);
+            }
+        });
+    };
+
+    function saveinvoice(TicketID, CustomerID, CustomerAccNo) {
+        $.ajax({
+            url: '/Handlers/SaveOrder.ashx',
+            type: 'GET',
+            data: {
+                TicketID: TicketID,      // Send TicketID as data to server
+                CustomerID: customerID,  // Send CustomerID as data to server
+                CustomerAccNo: CustomerAccNo  // Send CustomerID as data to server
+            },
+            success: function (response) {
+                console.log("Order saved successfully!", response);
+                alert("Order saved successfully!!!!" + response);
+                const domElement = document.getElementById('popupContentReturn');
+                domElement.value = convertToNumber(response); // Save response as a Number
+                response
+            },
+            error: function (xhr, status, error) {
+                console.error("AJAX error - Status:", status, "Error:", error);
+
+                // Write the error message in a red band in #popupContentReturn
+                //$("#popupContentReturn").html("<div style='background-color: red; color: white; padding: 10px; margin: 10px 0;'>Error processing payment: " + error + "</div>");
+
+                // Disable the submit button and all form controls within the modal
+                //$("#submit-sale").prop("disabled", true);
+                //$("#payModal input, #payModal textarea, #payModal select").prop("disabled", true);
+                alert("AJAX Error: " + error);
+            }
+
+        });
+    };
+
+</script>
+
+<div class="modal" data-easein="flipYIn" id="payModal" tabindex="-1" role="dialog" aria-labelledby="payModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-success">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title" id="payModalLabel">
+                    Payment 
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-9">
+                        <div class="font16">
+                            <table class="table table-bordered table-condensed" style="margin-bottom: 0;">
+                                <tbody>
+                                    <tr>
+                                        <td width="25%" style="border-right-color: #FFF !important;">Total Items</td>
+                                        <td width="25%" class="text-right"><span id="item_count">0.00></span></td>
+                                        <td width="25%" style="border-right-color: #FFF !important;">Total Payable</td>
+                                        <td width="25%" class="text-right"><span id="twt">0.00</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-right-color: #FFF !important;">Total Paying</td>
+                                        <td class="text-right"><span id="total_paying">0.00</span></td>
+                                        <td style="border-right-color: #FFF !important;">Balance</td>
+                                        <td class="text-right"><span id="balance">0.00</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="note">Note</label>
+                                    <textarea rows="1" cols="1" name="note" id="note" class="pa form-control kb-text"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="amount">Amount</label> <input name="amount" type="text" id="amount" class="pa form-control kb-pad amount" />
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="paid_by">Paying by</label>
+                                    <select id="paid_by" class="form-control paid_by select2" style="width:100%;">
+                                        <option value="cash">Cash</option>
+                                        <option value="CC">Credit Card</option>
+                                        <option value="cheque">Cheque</option>
+                                        <option value="gift_card">Gift Card</option>
+                                        <option value="stripe">Stripe</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group gc" style="display: none;">
+                                    <label for="gift_card_no">Gift Card No</label> <input type="text" id="gift_card_no" class="pa form-control kb-pad gift_card_no gift_card_input" />
+                                    <div id="gc_details"></div>
+                                </div>
+                                <div class="pcc" style="display:none;">
+                                    <div class="form-group">
+                                        <input type="text" id="swipe" class="form-control swipe swipe_input" placeholder="Swipe card here then write security code manually" />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="form-group">
+                                                <input type="text" id="pcc_no" class="form-control kb-pad" placeholder="Credit Card No" />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form-group">
+                                                <input type="text" id="pcc_holder" class="form-control kb-text" placeholder="Holder Name" />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <div class="form-group">
+                                                <select id="pcc_type" class="form-control pcc_type select2" placeholder="Card Type">
+                                                    <option value="Visa">Visa</option>
+                                                    <option value="MasterCard">MasterCard</option>
+                                                    <option value="Amex">Amex</option>
+                                                    <option value="Discover">Discover</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <div class="form-group">
+                                                <input type="text" id="pcc_month" class="form-control kb-pad" placeholder="Month" />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <div class="form-group">
+                                                <input type="text" id="pcc_year" class="form-control kb-pad" placeholder="Year" />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <div class="form-group">
+                                                <input type="text" id="pcc_cvv2" class="form-control kb-pad" placeholder="CVV2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pcheque" style="display:none;">
+                                    <div class="form-group">
+                                        <label for="cheque_no">Cheque No</label>
+                                        <input type="text" id="cheque_no" class="form-control cheque_no kb-text" />
+                                    </div>
+                                </div>
+                                <div class="pcash">
+                                    <div class="form-group">
+                                        <label for="payment_note">Payment Note</label>
+                                        <input type="text" id="payment_note" class="form-control payment_note kb-text" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 text-center">
+                        <div class="btn-group btn-group-vertical" style="width:100%;">
+                            <button type="button" class="btn btn-info btn-block quick-cash" id="quick-payable">0.00</button>
+                            <button type="button" class="btn btn-block btn-warning quick-cash">1</button>
+                            <button type="button" class="btn btn-block btn-warning quick-cash">5</button>
+                            <button type="button" class="btn btn-block btn-warning quick-cash">10</button>
+                            <button type="button" class="btn btn-block btn-warning quick-cash">20</button>
+                            <button type="button" class="btn btn-block btn-warning quick-cash">50</button>
+                            <button type="button" class="btn btn-block btn-warning quick-cash">100</button>
+                            <button type="button" class="btn btn-block btn-warning quick-cash">500</button>
+                            <button type="button" class="btn btn-block btn-danger" id="clear-cash-notes">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal"> Close </button>
+                <button class="btn btn-primary" type="button" id="orderid" style="visibility:hidden;" > Close </button>
+                <div ID ="popupContentReturn" >waiting</div>
+                <button class="btn btn-primary" id="submit-sale" type="button" onclick="updateRecord()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+

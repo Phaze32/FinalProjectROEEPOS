@@ -1,0 +1,253 @@
+﻿<!-- *************************************************************************** -->
+<!--form is triggered through ajax function in file scripts\posmain.js line 164 -- >
+<!-- *************************************************************************** -->
+<style>
+    /* Style for the modal backdrop */
+    .modal-backdrop {
+        background-color: rgba(0, 0, 0, 0.1); /* Black with 50% transparency */
+    }
+
+    /* Style for the modal itself */
+    .modal {
+        background: rgba(255, 255, 255, 0.1); /* White with 80% transparency */
+        backdrop-filter: blur(5px); /* Adds a subtle blur effect */
+        border-radius: 10px; /* Rounded corners for a polished look */
+    }
+
+    /* Optional: Style for the modal content */
+    .modal-content {
+        border: 2px solid #ccc; /* Adds a border to the content */
+        padding: 20px; /* Space inside the modal content */
+    }
+
+    /* Optional: Style for close button inside the modal */
+    .modal-header .btn-close {
+        color: #000;
+    }
+
+    @keyframes flipYIn {
+        0% {
+            transform: perspective(1000px) rotateY(90deg); /* Start flipped */
+            opacity: 0; /* Hidden */
+        }
+
+        100% {
+            transform: perspective(1000px) rotateY(0); /* End in normal view */
+            opacity: 1; /* Fully visible */
+        }
+    }
+
+    /* Apply the animation to the modal */
+    .modal.flipYIn {
+        animation: flipYIn 0.3s ease-in-out; /* Animation duration and easing */
+        transform-origin: center; /* Set the transformation origin */
+    }
+</style>
+<div class="modal" data-easein="flipYIn" id="UserModal" tabindex="-1" role="dialog" aria-labelledby="cModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title" id="editModalLabel">Edit User</h4>
+            </div>
+            <form id="editForm" method="post">
+                <div class="modal-body">
+                    <input type="hidden" id="editUserID" name="UserID" />
+                    <div class="form-group">
+                        <label for="editForeName">First Name</label>
+                        <input type="text" id="editForeName" name="ForeName" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editSurName">Sur Name</label>
+                        <input type="text" id="editSurName" name="SurName" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editAddress">Address</label>
+                        <input type="text" id="editAddress" name="Address" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editPostCode">Post Code</label>
+                        <input type="text" id="editPostCode" name="PostCode" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editCity">City</label>
+                        <input type="text" id="editCity" name="City" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editPhoneNumber">Phone Number</label>
+                        <input type="text" id="editPhoneNumber" name="PhoneNumber" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editEmail">Email</label>
+                        <input type="email" id="editEmail" name="Email" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editLogin">Login</label>
+                        <input type="text" id="editLogin" name="Login" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="editPassword">Password</label>
+                        <input type="password" id="editPassword" name="Password" class="form-control" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" onclick="updateRecord()" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+        <div id="SystemMessage"></div>
+    </div>
+</div>
+<style>
+    @keyframes flipYIn {
+        0% {
+            transform: perspective(1000px) rotateY(90deg); /* Start flipped */
+            opacity: 0; /* Hidden */
+        }
+
+        100% {
+            transform: perspective(1000px) rotateY(0); /* End in normal view */
+            opacity: 1; /* Fully visible */
+        }
+    }
+
+    /* Apply the animation (with a slow flip) to the modal */
+    .modal.flipYIn {
+        animation: flipYIn 3s ease-in-out; /* Increased duration to 3s makes it slow */
+        transform-origin: center;
+    }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        alert("Page Loaded. Ready to Fetch Data!");
+        const defaultUserID = 8; // Default userID
+        defaultUserID = modalData.userID
+        fetchUserData(defaultUserID); // Trigger the AJAX call
+        $('#getdata').click(function () {
+            fetchUserData(defaultUserID); // Trigger the AJAX call
+        });
+    });
+
+    // Fetch user data and populate form
+    function fetchUserData(userId) {
+        $.ajax({
+            url: '/Handlers/UsersHandlerNew.ashx',
+            type: 'GET',
+            dataType: 'json',
+            data: { userId: userId },
+            success: function (data) {
+                console.log("AJAX Response:", data);
+
+                if (data && Array.isArray(data.data)) {
+                    const modalData = data.data.find(user => String(user.userID) === String(userId));
+
+                    if (modalData) {
+                        $('#editUserID').val(modalData.userID);
+                        $('#editForeName').val(modalData.ForeName);
+                        $('#editSurName').val(modalData.SurName);
+                        $('#editAddress').val(modalData.address);  // Fixed casing
+                        $('#editPostCode').val(modalData.PostCode);
+                        $('#editCity').val(modalData.City);
+                        $('#editPhoneNumber').val(modalData.PhoneNumber);
+                        $('#editEmail').val(modalData.Email);
+                        $('#editLogin').val(modalData.Login);
+                        $('#editPassword').val(modalData.Password);
+
+                        // Show the modal with user data
+                        $('#UserModal').modal('show');
+                    } else {
+                        alert('No data found for this user.');
+                    }
+                } else {
+                    alert('Unexpected data format or no response!');
+                }
+            },
+            error: function () {
+                alert('Error fetching data from the server!');
+            }
+        });
+    };
+    function updateRecord() {
+        console.log('Starting updateRecord function...'); // Log function start
+        alert("Starting updateRecord function...");
+
+        // Gather form data
+        const formData = {
+            action: "update", // Specify the update action
+            editUserID: $('#editUserID').val().trim(),
+            editForeName: $('#editForeName').val().trim(),
+            editSurName: $('#editSurName').val().trim(),
+            editAddress: $('#editAddress').val().trim(),
+            editPostCode: $('#editPostCode').val().trim(),
+            editCity: $('#editCity').val().trim(),
+            editPhoneNumber: $('#editPhoneNumber').val().trim(),
+            editEmail: $('#editEmail').val().trim(),
+            editLogin: $('#editLogin').val().trim(),
+            editPassword: $('#editPassword').val().trim()
+        };
+
+        console.log('Form Data:', formData); // Log the gathered form data
+
+        // Validate essential fields (e.g., editUserID)
+        if (!formData.editUserID) {
+            alert('User ID is required for updating the record.');
+            console.error('editUserID is missing.');
+            return; // Exit the function if validation fails
+        }
+
+        // Send the JSON request
+        $.ajax({
+            url: '/Handlers/UserHandler.ashx', // Update handler URL
+            type: 'GET', // Use POST for update operations
+            contentType: 'application/json', // Specify JSON content type
+            dataType: 'json',
+            data: {
+                action: "update", // Specify the update action
+                editUserID: $('#editUserID').val().trim(),
+                editForeName: $('#editForeName').val().trim(),
+                editSurName: $('#editSurName').val().trim(),
+                editAddress: $('#editAddress').val().trim(),
+                editPostCode: $('#editPostCode').val().trim(),
+                editCity: $('#editCity').val().trim(),
+                editPhoneNumber: $('#editPhoneNumber').val().trim(),
+                editEmail: $('#editEmail').val().trim(),
+                editLogin: $('#editLogin').val().trim(),
+                editPassword: $('#editPassword').val().trim()
+            },
+            success: function (response) {
+                console.log('AJAX request completed successfully. Server Response:', response); // Log server response
+                showMessage(response.message || 'Record updated successfully!', 'green'); // Show success message in green
+                console.log('Record update operation was successful.');
+            },
+
+            error: function (xhr, status, error) {
+                console.error('AJAX request failed with error:', error); // Log AJAX request failure
+                console.error('Response Text:', xhr.responseText); // Log the server response text for debugging
+                console.error('Status:', status); // Log status for additional context
+                showMessage('Error updating the record. Please try again.', 'red'); // Display error message in red
+            }
+        });
+
+        console.log('AJAX request sent. Waiting for server response...'); // Log that request was sent
+    }
+
+    // Helper function to display messages
+    function showMessage(message, color) {
+        const systemMessage = document.getElementById('SystemMessage'); // Make sure this element exists in the HTML
+        if (systemMessage) {
+            systemMessage.innerText = message;
+            systemMessage.style.color = 'white';
+            systemMessage.style.backgroundColor = color === 'green' ? 'green' : 'red';
+            systemMessage.style.padding = '10px';
+            systemMessage.style.margin = '10px 0';
+            systemMessage.style.borderRadius = '5px';
+            systemMessage.style.fontWeight = 'bold';
+            systemMessage.style.textAlign = 'center';
+            systemMessage.style.display = 'block'; // Ensure the message is visible
+        } else {
+            console.error('SystemMessage element not found.');
+        }
+    };
+</script>

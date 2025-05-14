@@ -1,0 +1,22 @@
+﻿<!-- *************************************************************************** -->
+<!-- form is triggered through ajax function in file scripts\posmain.js line 164 -->
+<!-- *************************************************************************** -->
+	<div class="modal fade" id="picModal" tabindex="-1"  data-easein="flipYIn"  role="dialog" aria-labelledby="picModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="fa fa-times"></i>
+					</button>
+					<button type="button" class="close mr10" onclick="window.print();">
+						<i class="fa fa-print"></i>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">title</h4>
+				</div>
+				<div class="modal-body text-center">
+					<img id="product_image" src="" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+

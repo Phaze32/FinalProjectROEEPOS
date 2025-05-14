@@ -1,0 +1,157 @@
+﻿<script type="text/javascript">
+    // Fetch user data and populate form
+    function fetchData(GiftCardID) {
+        alert("fetchData.GiftCardID=" + GiftCardID);
+        console.log("fetchData.GiftCardID:", GiftCardID);
+
+        $.ajax({
+            url: '/Handlers/GiftcardHandler.ashx', // Ensure this URL is correct
+            type: 'GET',
+            dataType: 'json', // Expect a JSON response
+            data: { GiftCardID: GiftCardID.trim() }, // Send GiftCardID as part of the request
+            success: function (response) {
+                console.log("AJAX Response:", response);
+
+                // Check if the response contains a "data" property and it's an array
+                if (response && Array.isArray(response.data)) {
+                    // Find the gift card matching GiftCardID
+                    const modalData = response.data.find(Giftcard => String(Giftcard.GiftCardID) === String(GiftCardID));
+
+                    if (modalData) {
+                        // Populate modal fields with returned data
+                        $('#GiftCardID').val(modalData.GiftCardID);
+                        $('#CardNumber').val(modalData.CardNumber);
+                        $('#CardName').val(modalData.CardName);
+                        $('#Balance').val(modalData.Balance);
+                        $('#DiscountPercentage').val(modalData.DiscountPercentage);
+                        $('#IsActive').val(modalData.IsActive ? "Active" : "Inactive"); // Format boolean value
+                        $('#CreatedDate').val(new Date(modalData.CreatedDate).toLocaleString()); // Format date
+                        $('#ExpiryDate').val(new Date(modalData.ExpiryDate).toLocaleString()); // Format date
+                        console.log("Modal fields populated successfully!");
+                    } else {
+                        alert('No data found for the provided GiftCardID.');
+                    }
+                } else {
+                    alert('Unexpected response format or no data available!');
+                    console.error("Unexpected response format:", response);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                console.error('Status:', status);
+                console.error('Response:', xhr.responseText);
+                alert('Error fetching data from the server!');
+            }
+        });
+
+        console.log("AJAX request sent for GiftCardID:", GiftCardID);
+    }
+
+</script>
+
+<!-- *************************************************************************** -->
+<!-- form is triggered through ajax function in file scripts\posmain.js line 164 -->
+<!-- *************************************************************************** -->
+<style>
+    /* Style for the modal backdrop */
+    .modal-backdrop {
+        background-color: rgba(0, 0, 0, 0.1); /* Black with 50% transparency */
+    }
+
+    /* Style for the modal itself */
+    .modal {
+        background: rgba(255, 255, 255, 0.1); /* White with 80% transparency */
+        backdrop-filter: blur(5px); /* Adds a subtle blur effect */
+        border-radius: 10px; /* Rounded corners for a polished look */
+    }
+
+    /* Optional: Style for the modal content */
+    .modal-content {
+        border: 2px solid #ccc; /* Adds a border to the content */
+        padding: 20px; /* Space inside the modal content */
+    }
+
+    /* Optional: Style for close button inside the modal */
+    .modal-header .btn-close {
+        color: #000;
+    }
+
+    @keyframes flipYIn {
+        0% {
+            transform: perspective(1000px) rotateY(90deg); /* Start flipped */
+            opacity: 0; /* Hidden */
+        }
+
+        100% {
+            transform: perspective(1000px) rotateY(0); /* End in normal view */
+            opacity: 1; /* Fully visible */
+        }
+    }
+
+    /* Apply the animation to the modal */
+    .modal.flipYIn {
+        animation: flipYIn 0.3s ease-in-out; /* Animation duration and easing */
+        transform-origin: center; /* Set the transformation origin */
+    }
+</style>
+<div class="modal" data-easein="flipYIn" id="gcModal" tabindex="-1" role="dialog" aria-labelledby="mModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Sell Gift Card</h4>
+            </div>
+            <form id="editForm" method="post">
+                <div class="modal-body">
+                    <input type="hidden" id="editGiftCardID" name="GiftCardID" />
+                    <div class="form-group">
+                        <label for="GiftCardID">GiftCard ID</label>
+                        <input type="text" id="GiftCardID" name="ForeName" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="CardNumber">Card Number</label>
+                        <input type="text" id="CardNumber" name="SurName" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="CardName">Card Name</label>
+                        <input type="text" id="CardName" name="Address" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="Balance">Balance</label>
+                        <input type="text" id="Balance" name="PostCode" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="DiscountPercentage">Discount Percentage</label>
+                        <input type="text" id="DiscountPercentage" name="DiscountPercentage" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="IsActive">IsActive</label>
+                        <input type="text" id="IsActive" name="IsActive" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="CreatedDate">Created Date</label>
+                        <input type="email" id="CreatedDate" name="CreatedDate" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="ExpiryDate">Expiry Date</label>
+                        <input type="text" id="ExpiryDate" name="ExpiryDate" class="form-control" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" id="getdata" onclick="">Get User Data</button>
+
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" id="addGiftCard" class="btn btn-primary">Sell Gift Card</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+

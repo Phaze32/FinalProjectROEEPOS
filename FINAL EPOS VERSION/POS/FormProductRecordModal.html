@@ -1,0 +1,329 @@
+﻿<style>
+    /* Scoped styling specific to the modal */
+    #proModal {
+        font-family: Arial, sans-serif;
+    }
+
+        #proModal .modal-content {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            width: 95%;
+            height: 800px; /* Maintain modal height */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+        }
+
+        /* Center the title */
+        #proModal .modal-title {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center; /* Center the title */
+        }
+
+        /* Flex container to align labels and input fields */
+        #proModal .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px; /* Reduce the spacing between rows */
+        }
+
+            /* Styling for labels */
+            #proModal .form-row label {
+                font-size: 14px;
+                font-weight: bold;
+                width: 30%;
+                margin-right: 10px;
+                text-align: right;
+                line-height: 1.2; /* Reduce label line height */
+            }
+
+            /* Styling for input fields */
+            #proModal .form-row input,
+            #proModal .form-row select {
+                font-size: 14px;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+                width: 60%; /* Adjust input width logically */
+                line-height: 1.2; /* Reduce line height of inputs */
+            }
+
+                /* Limit field width based on logical usage */
+                #proModal .form-row input[type="number"] {
+                    width: 40%; /* Limit width for number inputs */
+                }
+
+                #proModal .form-row input[type="datetime-local"] {
+                    width: 60%; /* Wider for date-time inputs */
+                }
+
+        /* Submit button styling */
+        #proModal button[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 30%; /* Align button with labels */
+        }
+
+            #proModal button[type="submit"]:hover {
+                background-color: #218838;
+            }
+
+    /* Responsive design */
+    @media screen and (max-width: 768px) {
+        #proModal .modal-content {
+            width: 90%;
+        }
+
+        #proModal .form-row {
+            flex-direction: column; /* Stack labels and inputs vertically */
+            align-items: flex-start; /* Align inputs with labels */
+        }
+
+            #proModal .form-row label {
+                text-align: left;
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            #proModal .form-row input,
+            #proModal .form-row select {
+                width: 100%; /* Full width for small screens */
+            }
+
+        #proModal button[type="submit"] {
+            margin-left: 0; /* Adjust alignment for smaller screens */
+        }
+    }
+</style>
+<!-- *************************************************************************** -->
+<!-- form is triggered through ajax function in file scripts\posmain.js line 164 -->
+<!-- *************************************************************************** -->
+<div class="modal" data-easein="flipYIn" id="proModal" tabindex="-1" role="dialog" aria-labelledby="proModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title" id="proModalLabel">EDIT PRODUCT</h4>
+                <table style="width:100%;">
+                    <tr><td>
+                <div style="display: flex; justify-content: center; align-items: center;">
+        <img id="imagePreview" src="" alt="Product Image" style="max-width: 250px; max-height: 250px; border: 1px solid #ccc; border-radius: 5px;">
+                </div>
+                    </td></tr>
+                    <tr><td><div class="image-caption" style="font-size:larger; margin-top: 3px; text-align: center; align-items: center;" id="imageCaption"></div>
+                        </td></tr>
+                </table>
+                
+            </div>
+            <div class="modal-body">
+                <form id="editPLUForm">
+                    <div class="form-row">
+                        <label for="pluid">PLUID:</label>
+                        <input type="text" id="pluid" name="PLUID" readonly>
+                        <input type="hidden" id="editpluid" name="editpluid" />
+                    </div>
+                    <div class="form-row">
+                        <label for="ProductImage">ProductImage:</label>
+                        <input type="text" id="ProductImage" name="ProductImage">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="type">Type:</label>
+                        <input type="text" id="type" name="Type">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="description">Description:</label>
+                        <input type="text" id="description" name="Description">
+                    </div>
+                    <div class="form-row">
+                        <label for="Department">Department:</label>
+                        <input type="text" id="Department" name="Department">
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <div class="form-row" style="flex: 1; max-width: 200px;">
+                            <label for="plulist" style="width: 80px;">PLU List:</label>
+                            <select id="plulist" name="PLUList" style="width: 50px;">
+                                <option value="true">Yes</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row" style="flex: 1; max-width: 200px;">
+                            <label for="listid" style="width: 80px;">List ID:</label>
+                            <input type="number" id="listid" name="ListID" style="width: 50px;">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="pieces">Pieces:</label>
+                        <input type="number" id="pieces" name="Pieces">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="price1">Price (£):</label>
+                        <input type="number" id="price" name="Price" step="0.01">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="allowdiscount">Allow Discount:</label>
+                        <select id="allowdiscount" name="AllowDiscount">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="created">Created:</label>
+                        <input type="datetime-local" id="created" name="Created">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="createdby">Created By:</label>
+                        <input type="text" id="createdby" name="CreatedBy">
+                    </div>
+
+                    <div class="form-row">
+                        <button type="button" onclick="updateRecord()" id="SaveData">Save Changes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        alert("Page Loaded. Ready to Fetch Data!");
+        const defaultPLUID = 0; // Default userID
+        defaultPLUID = button.getAttribute('data-pluid');
+        alert("defaultPLUID" + defaultPLUID);
+        fetchUserData(defaultPLUID); // Trigger the AJAX call
+        $('#getdata').click(function () {
+            fetchUserData(defaultPLUID); // Trigger the AJAX call
+        });
+    });
+
+</script>
+
+<script charset="utf-8">
+
+    function fetchProductData(pluid) {
+        console.log('Fetching product data for PLUID:', pluid);
+        alert('Fetching product data for PLUID:' + pluid);
+        $.ajax({
+            url: '/Handlers/ProductRecordHandler.ashx', // The server endpoint
+            type: 'GET',
+            contentType: 'application/x-www-form-urlencoded', // Data format
+            data: { PLUID: pluid }, // Send PLUID to the server
+            beforeSend: function () {
+                // Log the data being sent
+                console.log('Data being sent:', { PLUID: pluid });
+            },
+            success: function (data) {
+                // Log the data received from the server
+                alert('AJAX call successful! Data received:> ' + JSON.stringify(data));
+                console.log('Data received:', data);
+
+                if (data.data && data.data.length > 0) {
+                    var item = data.data[0];
+                    $('#pluid').val(item.PLUID);
+                    $('#ProductImage').val(item.ProductImage);
+                    $('#type').val(item.Type);
+                    $('#description').val(item.Description);
+                    $('#Department').val(item.Department);
+                    $('#plulist').val(item.PLUList ? "true" : "false");
+                    $('#listid').val(item.ListID);
+                    $('#pieces').val(item.Pieces);
+                    $('#price').val(item.Price);
+                    $('#allowdiscount').val(item.AllowDiscount ? "true" : "false");
+                    $('#created').val(item.Created ? item.Created.replace(' ', 'T') : "");
+                    $('#createdby').val(item.CreatedBy);
+
+                    // Update image preview
+                    var imagePreview = document.getElementById('imagePreview');
+                    var imageName = item.ProductImage;
+                    imagePreview.src = imageName ? '/POS/images/POSImages/' + imageName : '';
+                    document.getElementById('imageCaption').innerHTML = item.Description;
+
+                    $('#proModal').modal('show');
+                } else {
+                    alert('No records found for PLUID: ' + pluid);
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert('AJAX call failed! ' + textStatus);
+                console.error('Error:', textStatus, errorThrown);
+                console.log('Server response:', jqXHR.responseText);
+            }
+        });
+    };
+
+    //----- to save update data ----//
+
+    function updateRecord() {
+        console.log('Starting updateCategory function...'); // Log function start
+        alert("FormCatagoryModal.html.Starting updateCategory function...");
+        // Gather form data
+        const formData = {
+            action: "update", // Specify the update action
+            pluid: $('#pluid').val().trim(),
+            ProductImage: $('#ProductImage').val().trim(),
+            type: $('#type').val().trim(),
+            description: $('#description').val().trim(),
+            Department: $('#Department').val().trim(),
+            plulist: $('#plulist').val().trim(),
+            listid: $('#listid').val().trim(),
+            pieces: $('#pieces').val().trim(),
+            price: $('#price').val().trim(),
+            allowdiscount: $('#allowdiscount').val().trim(),
+            created: $('#created').val().trim(),
+            createdby: $('#createdby').val().trim()
+
+        };
+        console.log('Form Data:', formData); // Log the gathered form data
+
+        // Send the JSON request
+        $.ajax({
+            url: '/Handlers/ProductSaveUpdateHandler.ashx',
+            type: 'GET',
+            dataType: 'json',
+            data: {
+                action: "update",
+                pluid: $('#pluid').val().trim(),
+                ProductImage: $('#ProductImage').val().trim(),
+                type: $('#type').val().trim(),
+                description: $('#description').val().trim(),
+                Department: $('#Department').val().trim(),
+                plulist: $('#plulist').val().trim(),
+                listid: $('#listid').val().trim(),
+                pieces: $('#pieces').val().trim(),
+                price: $('#price').val().trim(),
+                allowdiscount: $('#allowdiscount').val().trim(),
+                created: $('#created').val().trim(),
+                createdby: $('#createdby').val().trim()
+            },
+            success: function (response) {
+                // ... same as before
+            },
+            error: function (xhr, status, error) {
+                // ... same as before
+            }
+        });
+
+
+        console.log('AJAX request sent. Waiting for server response...'); // Log that request was sent
+    };
+</script>
+
+
+
+

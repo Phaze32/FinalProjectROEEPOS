@@ -1,0 +1,293 @@
+﻿
+<style>
+    /* Style for the modal backdrop */
+    .modal-backdrop {
+        background-color: rgba(0, 0, 0, 0.1); /* Black with 50% transparency */
+    }
+
+    /* Style for the modal itself */
+    .modal {
+        background: rgba(255, 255, 255, 0.1); /* White with 80% transparency */
+        backdrop-filter: blur(5px); /* Adds a subtle blur effect */
+        border-radius: 10px; /* Rounded corners for a polished look */
+    }
+
+    /* Optional: Style for the modal content */
+    .modal-content {
+        border: 2px solid #ccc; /* Adds a border to the content */
+        padding: 20px; /* Space inside the modal content */
+    }
+
+    /* Optional: Style for close button inside the modal */
+    .modal-header .btn-close {
+        color: #000;
+    }
+
+</style>
+<!-- *************************************************************************** -->
+<!-- form is triggered through ajax function in file scripts\posmain.js line 164 -->
+<!-- ************************************************************************ -->
+<div class="modal" data-easein="flipYIn" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="cModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+                <h4 class="modal-title" id="cModalLabel">
+                    Add Customer
+                </h4>
+            </div>
+            <!-- Add Customer Form-->
+            <form  id="customer-form" method="post" accept-charset="utf-8">
+                <input type="hidden" name="spos_token" value="1479a37b6443485bdaaf75fb256d1484" />
+                <input type="hidden" name="spos_token" id="cname" />
+                <input type="hidden" name="spos_token" id="modalData" />
+                <input type="hidden" name="spos_token" id="customerName" />
+                <input type="hidden" name="spos_token" id="targetElement" />
+                
+                <div class="modal-body">
+                    <div id="c-alert" class="alert alert-danger" style="display:none;"></div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <input type="text" id="editCustomerID" name="CustomerID" />
+                                <label class="control-label" for="code">First Name</label>
+                                <input type="text" id="editForeName" name="name_placeholder_Name" value="" class="form-control input-sm kb-text" />
+                                <label class="control-label" for="code">Sur Name</label>
+                                <input type="text" id="editSurName" name="sur_name_placeholder_Name" value="" class="form-control input-sm kb-text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="cemail">Email Address</label>
+                                <input type="text" id="editEmail" name="email_placeholder_Name" value="" class="form-control input-sm kb-text" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="phone">Phone</label>
+                                <input type="text" name="phone" id="editPhoneNumber" value="" class="form-control input-sm kb-pad" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="cf1">Address 1</label>
+                                <input type="text" name="cf1_placeholder_Name" value="" class="form-control input-sm kb-text" id="editAddress" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="cf2">Address 2</label>
+                                <input type="text" name="cf2_placeholder_Name" value="" class="form-control input-sm kb-text" id="cf2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label" for="postcode">Post Code</label>
+                                <input type="text" id="editPostCode" name="postcode_placeholder_Name" value="" class="form-control input-sm kb-text" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer" style="margin-top:0;">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal"> Close </button>
+                    <button type="button" class="btn btn-primary" id="add_customer" onclick="saveCustomerData()"> Add Customer</button>
+                </div>
+                <div id="result"> result </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+      //  alert("Page Loaded. Ready to Fetch Customer Data!");
+       // const defaultCustomerID = 8; // Default userID
+       // defaultCustomerID = modalData.CustomerID
+       // fetchCustomerData(defaultCustomerID); // Trigger the AJAX call
+       // $('#getdata').click(function () {
+       //     fetchCustomerData(defaultCustomerID); // Trigger the AJAX call
+       // });
+    });
+
+    function saveCustomerData22() {
+        console.log('Starting saveCustomerData function...'); // Log function start
+
+        // Gather form data from the modal
+        const formData = {
+            action: "add",                                     // Explicitly set action to "add"
+            editCustomerID: $('#editCustomerID').val().trim(), // Customer ID, blank for "add"
+            editForeName: $('#editForeName').val().trim(),    // First Name
+            editSurName: $('#editSurName').val().trim(),      // Sur Name
+            editAddress: $('#editAddress').val().trim(),      // Address
+            editPostCode: $('#editPostCode').val().trim(),    // Post Code
+            editCity: $('#cf2').val().trim(),                // Address 2 (used as City)
+            editPhoneNumber: $('#editPhoneNumber').val().trim(), // Phone Number
+            editEmail: $('#editEmail').val().trim(),          // Email
+            editStatus: "Active"                             // Default status (e.g., Active)
+        };
+
+        console.log('Form Data:', formData); // Log the gathered form data
+
+        // Validate required fields (optional, you can extend this as needed)
+        if (!formData.editForeName || !formData.editSurName || !formData.editEmail) {
+            alert("First Name, Sur Name, and Email are required.");
+            console.error("Validation failed: Missing required fields.");
+            return; // Exit the function if validation fails
+        }
+
+        // Send AJAX request
+        $.ajax({
+            url: '/Handlers/CustomerSaveHandler.ashx', // Handler URL
+            type: 'GET',                              // Use POST method
+            contentType: 'application/json',          // Specify JSON content type
+            dataType: 'json',                         // Expect JSON response
+            data: (formData),           // Convert form data to JSON string
+            success: function (response) {
+                console.log('AJAX request completed successfully. Server Response:', response); // Log server response
+
+                if (response.success) {
+                    // If the response is successful, update UI with CustomerID and Name
+                    const customerID = response.newCustomerID || formData.editCustomerID; // Use new ID for 'add', existing ID for 'update'
+                    const customerName = response.newForeName && response.newSurName
+                        ? `${response.newForeName} ${response.newSurName}`
+                        : `${formData.editForeName} ${formData.editSurName}`; // Use Name from response for 'add', form data for 'update'
+
+                    // Update the dropdown with the new customer or updated customer
+                    const dropdown = $('#customer-dropdown');
+                    const existingOption = dropdown.find(`option[value='${customerID}']`);
+
+                    if (existingOption.length > 0) {
+                        // Update existing option
+                        existingOption.text(customerName);
+                        console.log(`Dropdown option for CustomerID ${customerID} updated.`);
+                    } else {
+                        // Add new option
+                        dropdown.append(new Option(customerName, customerID));
+                        console.log(`Dropdown option for CustomerID ${customerID} added.`);
+                    }
+
+                    showMessage(response.message || 'Operation completed successfully!', 'green'); // Display green success message
+                   // $('#customerModal').modal('hide'); // Close the modal
+                    refreshCustomerDropdown(); // Optional: Reinitialize dropdown if select2 is used
+                } else {
+                    // If the server returns a failure, show an error message
+                    showMessage(response.message || 'Failed to save customer data.', 'red'); // Display red error message
+                    console.warn('Server returned failure:', response.message || 'No message provided');
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('AJAX request failed with error:', error); // Log AJAX request failure
+                console.error('Response Text:', xhr.responseText); // Log server response
+                console.error('Status:', status); // Log request status
+                showMessage('Error saving customer data. Please try again.', 'red'); // Display error message in red
+            }
+        });
+
+        console.log('AJAX request sent. Waiting for server response...'); // Log that request was sent
+    }
+    function saveCustomerData() {
+        console.log('Starting saveCustomerData function...'); // Log function start
+
+        // Gather form data from the modal
+        const formData = {
+            action: "add", // Explicitly set action to "add"
+            editCustomerID: $('#editCustomerID').val().trim(), // Customer ID, blank for "add"
+            editForeName: $('#editForeName').val().trim(),    // First Name
+            editSurName: $('#editSurName').val().trim(),      // Sur Name
+            editAddress: $('#editAddress').val().trim(),      // Address
+            editPostCode: $('#editPostCode').val().trim(),    // Post Code
+            editCity: $('#cf2').val().trim(),                // Address 2 (used as City)
+            editPhoneNumber: $('#editPhoneNumber').val().trim(), // Phone Number
+            editEmail: $('#editEmail').val().trim(),          // Email
+            editStatus: "Active"                             // Default status (e.g., Active)
+        };
+
+        console.log('Form Data:', formData); // Log the gathered form data
+
+        // Validate required fields
+        if (!formData.editForeName || !formData.editSurName || !formData.editEmail) {
+            alert("First Name, Sur Name, and Email are required.");
+            console.error("Validation failed: Missing required fields.");
+            return; // Exit the function if validation fails
+        }
+
+        // Convert form data to query string
+        const queryString = Object.keys(formData)
+            .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(formData[key])}`)
+            .join('&');
+
+        console.log('Query String:', queryString); // Log the query string
+
+        // Send AJAX request
+        $.ajax({
+            url: '/Handlers/CustomerSaveHandler.ashx', // Handler URL
+            type: 'POST',                              // Use POST method
+            contentType: 'application/x-www-form-urlencoded', // Content type for query string
+            data: queryString,                        // Send data as query string
+            success: function (response) {
+                console.log('AJAX request completed successfully. Server Response:', response); // Log server response
+
+                if (response.success) {
+                    // Assuming the flat JSON response contains "newCustomerID", "newForeName", "newSurName", and "CustomerAccNo"
+                    const customerID = response.newCustomerID; // Use new ID from response
+                    const customerName = `${response.newForeName} ${response.newSurName}`; // Combine ForeName and SurName
+                    const customerAccNo = response.CustomerAccNo; // Example: Account number from response
+
+                    // Add new customer to dropdown
+                    const dropdown = $('#customer-dropdown');
+                    dropdown.append(new Option(customerName, customerID));
+                    console.log(`Dropdown updated with CustomerID ${customerID} and Name ${customerName}.`);
+
+                    // Update hidden input fields
+                    $('#customer_id_Selected').val(customerID); // Update customer_id_Selected
+                    $('#customer_CustomerAccNo').val(customerAccNo); // Update customer_CustomerAccNo
+                    console.log(`Hidden input fields updated: customer_id_Selected = ${customerID}, customer_CustomerAccNo = ${customerAccNo}`);
+                    alert("customer_id_Selected=" + $('#customer_id_Selected').val() + "customer_id_Selected=" + $('#customer_CustomerAccNo').val())
+                    showMessage(response.message || 'Customer added successfully!', 'green'); // Display green success message
+                    //$('#customerModal').modal('hide'); // Close the modal
+                } else {
+                    showMessage(response.message || 'Failed to add customer.', 'red'); // Display red error message
+                    console.warn('Server returned failure:', response.message || 'No message provided');
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('AJAX request failed with error:', error); // Log AJAX request failure
+                console.error('Response Text:', xhr.responseText); // Log server response
+                console.error('Status:', status); // Log request status
+                showMessage('Error adding customer. Please try again.', 'red'); // Display error message in red
+            }
+        });
+
+        console.log('AJAX request sent. Waiting for server response...'); // Log that request was sent
+    }
+
+    // Helper function to display messages in SystemMessage element
+    function showMessage(message, color) {
+        const systemMessage = document.getElementById('result'); // Use the "result" div in your modal
+        if (systemMessage) {
+            systemMessage.innerText = message; // Set the message text
+            systemMessage.style.color = 'white'; // Text color
+            systemMessage.style.backgroundColor = color === 'green' ? 'green' : 'red'; // Background color
+            systemMessage.style.padding = '10px';
+            systemMessage.style.margin = '10px 0';
+            systemMessage.style.borderRadius = '5px';
+            systemMessage.style.fontWeight = 'bold';
+            systemMessage.style.textAlign = 'center';
+            systemMessage.style.display = 'block'; // Ensure the message is visible
+        } else {
+            console.error('SystemMessage element not found.');
+        }
+    };
+
+    // Optional function to refresh the dropdown if select2 is used
+    function refreshCustomerDropdown() {
+        $('#customer-dropdown').select2({ width: '100%' }); // Reinitialize select2
+        console.log('Customer dropdown refreshed.');
+    }
+</script>
